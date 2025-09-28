@@ -1,0 +1,67 @@
+/*게시판 글씨 써진 박스*/
+.box1 {
+    height: 200px;
+    width: 100%;
+ 
+    text-align: center;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.box1 h1 {
+    padding-top: 70px;
+    font-size: 48px;
+}
+/*리스트 묶은 박스 */
+.list {
+    width:800px;
+    min-height: 400px;
+    height:auto;
+    margin:40px auto;
+}
+/*프로필 개별 박스*/
+.box2 {
+    
+    width:600px;
+    margin: 20px auto 0px auto;
+}
+/*유저프로필 이미지*/
+.profileimg {
+    padding-left:24px;
+    width:100px;
+    float:left;
+    /* display: block; */
+    /* border:1px solid green; */
+  
+}
+.profileimg img {
+    
+    width:60px;
+    height:60px;
+    margin:0px auto 20px auto;
+    display: inline-block;
+    border-radius: 70%;
+    border:2px solid #f1f1f1;
+
+}
+/*유저아이디*/
+.userinfo {
+    padding:12px;
+    width:500px;
+    height: 60px;
+    float:left;
+    border-bottom: 2px dotted #e4e4e4;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/*목록삭제버튼*/
+.btn {
+    margin-top:40px;
+    width:60px;
+    float: right;
+    font-size:14px;
+    color:#424242
+}
+.btn:hover {
+    font-weight: bold;
+}

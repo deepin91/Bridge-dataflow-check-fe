@@ -1,0 +1,74 @@
+
+/*로그인 박스*/
+.loginbackg {
+    width: 585px;
+    height: 640px;
+    border: 1px solid rgb(217,217,217,0.1);
+    text-align: center;
+    margin:140px auto 60px auto;
+    background-color: rgb(217,217,217,0.5);
+    border-radius: 1rem;
+  }
+  /*아이디&비밀번호 입력 인풋박스*/
+  .logininput {
+    width:440px;
+    height:40px;
+    border: none;
+    border-radius: 0.3rem;
+  }
+  /*아이디&비밀번호 글씨*/
+  .loginp {
+    margin-top:30px;
+    margin-bottom: 8px;
+    margin-right: 370px;
+  }
+  /*로그인 버튼*/
+  .loginbutton {
+    margin-top:70px;
+    width:440px;
+    height:54px;
+    border: none;
+    font-size:15px;
+    border-radius: 0.4rem;
+    margin-bottom: 20px;
+  }
+  /*로그인 버튼 안의 로그인 글씨*/
+  .login {
+    margin-top:80px;
+    font-size:24px;
+  }
+  /*클릭시 회원가입페이지로 이동되는 '회원가입' 글씨*/
+  .signup {
+    margin-left: 360px;
+    text-decoration: none;
+    
+    color: black;
+  }
+  /*SNS계정 간편 로그인 글씨*/
+  .loginsns {
+    margin-top:24px;
+    margin-bottom: 5px;
+  }
+  /*카카오, 네이버 로고*/
+  /* .logo {
+ 
+  } */
+  .kakao {
+    width:auto;
+    float: left;
+    margin-left:140px;
+    margin-top:32px;
+  }
+  .kakao {
+    width:auto;
+    float: left;
+    margin-left:200px;
+    margin-top:32px;
+  }
+  /*네이버 로고*/
+  .naver {
+    width:auto;
+    float: left;
+    margin-left:50px;
+    margin-top:32px;
+  }

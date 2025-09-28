@@ -1,0 +1,177 @@
+
+/* 컨텐츠 모두 묶는 박스 */
+.mainBox {
+    width: 800px;
+    margin: 140px auto;
+
+    height:500px;
+  }
+
+/* 메인 텍스트 */
+.mainText {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+/* 신고관리 박스 */
+.report {
+    width: 225px;
+    height: 395px;
+    margin-right: 40px;
+    border-radius: 20px;
+    background-color: #E1E5E9;
+    border: 0px ;
+    box-shadow: 10px 10px 0px rgba(243, 239, 239, 0.6);
+    display: inline-block;
+    float: left;
+}
+
+/* 신고관리 박스 클릭 */
+.report:hover {
+    background-color: rgba(225, 229, 233, 0.7);
+}
+
+/* 신고관리 아이콘 */
+.reportIcon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 90px auto 60px auto;
+}
+
+/* 신고관리 텍스트 */
+.report p {
+    margin-left: 50px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 신고관리 화살표 */
+.reportArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* 공지 등록 박스 */
+.notify {
+    width: 225px;
+    height: 395px;
+    margin-right: 40px;
+    border-radius: 20px;
+    background-color: #E1E5E9;
+    border: 0px ;
+    box-shadow: 10px 10px 0px rgba(243, 239, 239, 0.6);
+    display: inline-block;
+    float: left;
+}
+
+/* 공지등록 박스 클릭 */
+.notify:hover {
+    background-color: rgba(225, 229, 233, 0.7);
+}
+
+/* 공지등록 아이콘 */
+.notifyIcon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 90px auto 60px auto;
+}
+
+/* 공지등록 텍스트 */
+.notify p {
+    margin-left: 50px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 공지등록 화살표 */
+.notifyArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* 거래내역 박스 */
+.deal {
+    width: 225px;
+    height: 395px;
+    margin-right: 40px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #E1E5E9;
+    box-shadow: 10px 10px 0px rgba(243, 239, 239, 0.6);
+    display: inline-block;
+    float: left;
+}
+
+/* 거래내역 박스 클릭 */
+.deal:hover {
+    background-color: rgba(225, 229, 233, 0.7);
+}
+
+/* 거래내역 아이콘 */
+.dealIcon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 90px auto 60px auto;
+}
+
+/* 거래내역 텍스트 */
+.deal p {
+    margin-left: 50px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 거래내역 화살표 */
+.dealArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* 인증관리 박스 */
+.certification {
+    width: 225px;
+    height: 395px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #E1E5E9;
+    box-shadow: 10px 10px 0px rgba(243, 239, 239, 0.6);
+    display: inline-block;
+}
+
+/* 인증관리 박스 클릭 */
+.certification:hover {
+    background-color: rgba(225, 229, 233, 0.7);
+}
+
+/* 인증관리 아이콘 */
+.certificationIcon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 90px auto 60px auto;
+}
+
+/* 인증관리 텍스트 */
+.certification p {
+    margin-left: 50px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* 인증관리 화살표 */
+.certificationArrow {
+    width: 20px;
+    height: 20px;
+}

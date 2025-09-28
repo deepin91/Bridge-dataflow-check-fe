@@ -1,0 +1,39 @@
+.contentbox {
+   background-color: #d9d9d9;
+   width: 995px;
+   float:left;
+   height: 180px;
+   border-radius: 0.5rem; 
+   margin: 15px auto 100px;
+   /* margin-left:100px; */
+}
+/* 내용 입력 칸*/
+.write {
+   margin:20px;
+   padding:12px;
+   width:660px;
+   height:140px;
+   border-radius: 0.5rem;
+   border-style: none;
+   float: left;
+}
+/*파일 등록 칸 */
+.file {
+    background-color: white;
+    width:160px;
+    height:140px;
+    float: left;
+    margin:20px;
+   padding:12px;
+   border-radius: 0.5rem;
+}
+/*등록 버튼*/
+.done {
+    float: left;
+    background-color: #595959;
+    padding:8px;
+    border-radius: 0.3rem;
+    margin-top: 124px;
+    margin-left: 8px;
+    width:68px;
+}

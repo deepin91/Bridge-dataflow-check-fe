@@ -1,0 +1,101 @@
+/*회원가입 박스*/
+.loginbackg {
+    width: 585px;
+    height: 640px;
+    border: 1px solid rgb(217, 217, 217, 0.1);
+    text-align: center;
+    margin: 140px auto 60px auto;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-radius: 1rem;
+}
+
+/* 입력 인풋박스*/
+.signupinput {
+    /* margin: 6px 6px;
+    width: 430px;
+    height: 40px;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0px 5px; */
+    font-size: 18px;
+    width:1200px;
+    height:40px;
+    /* border-bottom: 2px solid #ebedf2; */
+    border-bottom:none;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px;
+}
+
+/*아이디&비밀번호 글씨*/
+.loginp {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-right: 370px;
+}
+
+/*저장하기 버튼*/
+.loginbutton {
+    /* margin-left:1100px;
+    margin-top: 40px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    background-color: grey;
+    border-radius: 0.4rem;
+    margin-bottom: 40px; */
+    float:right;
+    font-size: 16px;
+    border-bottom: 2px solid #ebedf2;
+    padding:12px 10px 10px 10px;
+    margin: 30px 0;
+}
+
+/*프로필 편집 글씨*/
+.login {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/*배터&프로필 입력칸 개별 div*/
+.button {
+    margin: 0 auto;
+    /* border-bottom:  2px solid #ebedf2; */
+
+
+}
+.signupbtn {
+    font-size: 18px;
+    float: right;
+    margin:40px 20px 40px 0px;
+    border-bottom:  2px solid #ebedf2;
+    padding-bottom: 12px;
+
+}
+
+/* 사진 첨부 버튼 */
+.photo {
+    height: 28px;
+    width: 64px;
+    position: relative;
+    right: 80px;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #ae6fff;
+    font-size: 12px;
+    color: white;
+}
+
+.photo:hover {
+    cursor: pointer;
+}
+
+.portfolio{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+

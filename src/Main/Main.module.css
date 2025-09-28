@@ -1,0 +1,335 @@
+/* 전체 속성 reset */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 컨텐츠 모두 묶는 박스 */
+  .Container {
+    width: 1200px;
+    margin: 100px auto;
+
+
+  }
+
+/* 상단 글자  */
+.textBox {
+    width: 100%;
+    margin: 1.75rem auto;
+    max-width: 1236px;
+    padding-inline: 1rem;
+}
+
+/* 컨텐츠 텍스트 */
+.mainText {
+    line-height: 1.25;
+    font-size: 4.25rem;
+
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+}
+
+/* 버튼 첫 줄 */
+.firstLine {
+    width: 1200px;
+    margin: 50px auto;
+}
+
+/* 온라인 합주 버튼 */
+.online {
+    width: 548px;
+    height: 328px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1509310202330-aec5af561c6b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1509&q=80");
+    background-size: 548px;
+
+}
+
+/* 온라인 합주 버튼 클릭 */
+.online:hover {
+    opacity: 0.8;
+}
+
+/* 온라인 합주 텍스트 */
+.online h3 {
+    margin-top: 180px;
+    margin-left: 20px;
+    color: #f6f6f6;
+    font-family: 'Pretendard-Regular';
+    font-weight: 900;
+}
+
+.online h3:hover {
+    color: #FCFCFC;
+}
+
+.online p {
+    color: #f6f6f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin:20px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    letter-spacing: 1px;
+
+
+}
+
+/* 오프라인 합주 버튼 */
+.offline {
+    width: 548px;
+    height: 328px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: 548px;
+}
+
+/* 오프라인 합주 버튼 클릭 */
+.offline:hover {
+    opacity: 0.8;
+}
+
+
+/* 오프라인 합주 텍스트 */
+.offline h3 {
+    margin-top: 180px;
+    margin-left: 20px;
+    color: #f6f6f6;
+    font-family: 'Pretendard-Regular';
+    font-weight: 900;
+}
+
+.offline h3:hover {
+    color: #FCFCFC;
+}
+
+.offline p {
+    color: #f6f6f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin:20px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    letter-spacing: 1px;
+
+
+}
+
+.secondLine {
+    width: 1200px;
+    margin: 150px auto;
+    margin-top: -50px;
+}
+
+
+/* 음원분리 버튼 */
+.musicSep {
+    width: 550px;
+    height: 243px;
+    margin-right: 50px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://freequizgames.com/wp-content/uploads/2022/12/what-instrument-am-i-musical-personality-test-instant-results_2022-12-12_270789.jpg");
+    background-size: 550px 245px;
+}
+
+/* 음원분리 버튼 클릭 */
+.musicSep:hover {
+    opacity: 0.8;
+}
+
+/* 음원분리 텍스트 */
+.musicSep h4 {
+    margin-top: 110px;
+    margin-left: 20px;
+    color: #f6f6f6;
+    font-family: 'Pretendard-Regular';
+    font-weight: 900;
+}
+
+.musicSep h4:hover {
+    color: #FCFCFC;
+}
+
+.musicSep p {
+    color: #f6f6f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin:20px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    letter-spacing: 1px;
+
+
+}
+
+/* 커뮤니티 버튼 */
+.community {
+    width: 550px;
+    height: 243px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    background-color: rgba(217, 217, 217, 0.8);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: 550px 250px;
+}
+
+/* 커뮤니티 버튼 클릭 */
+.community:hover {
+    opacity: 0.8;
+}
+
+
+/* 커뮤니티 텍스트 */
+.community h4 {
+    margin-top: 110px;
+    margin-left: 20px;
+    color: #f6f6f6;
+    font-family: 'Pretendard-Regular';
+    font-weight: 900;
+}
+
+.community h4:hover {
+    color: #FCFCFC;
+}
+
+.community p {
+    color: #f6f6f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin:20px;
+    font-family: 'Pretendard-Regular';
+    font-weight: 300;
+    letter-spacing: 1px;
+    
+
+}
+
+
+
+/* 공지사항 */
+
+.title {
+    position: absolute;
+    /* left: 0; */
+    /* top: 0; */
+    color: #EAEAEA;
+    font-weight: bold;
+    background-color: #151616;
+
+}
+
+.link {
+    position: relative;
+    left: 90px;
+    font-weight: lighter;
+    background-color: #151616;
+   
+
+
+}
+
+.link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    /* left: -20px; */
+    top: 50%;
+    width: 1px;
+    height: 14px;
+    margin-top: -7px;
+    background-color: #DDDDDD;
+}
+
+.link a {
+    overflow: hidden;
+    /* display: inline-block; */
+    color: #DDDDDD;
+    max-width: 100%;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    margin-left:20px;
+}
+
+/* .link a strong {
+    color: #01738b;
+    font-weight: 600;
+} */
+
+.date {
+    position: absolute;
+    right: 76px;
+    top: 0;
+    color: #929595;
+    font-family: 'Roboto';
+}
+
+.more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+    text-align: right;
+    
+}
+
+.more::before {
+    content: '';
+    display: block;
+    position: absolute;
+    /* left: 0; */
+    top: 50%;
+    width: 1px;
+    height: 14px;
+    margin-top: -7px;
+    background-color: #DDDDDD;
+    margin-left: 8px;
+}
+
+.more .iconset {
+    margin-top: -3px;
+    margin-left: 5px;
+}
+
+.wrap {width: 1180px; position: relative; margin: 0 auto; }

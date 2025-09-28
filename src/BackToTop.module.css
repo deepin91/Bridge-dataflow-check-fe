@@ -1,0 +1,43 @@
+
+.scroll_container{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 1;
+  }
+  #top{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 14px 13px;
+    background-color: whitesmoke;
+    /* color: #fff; */
+    /* border: 1px solid rgb(210, 204, 193); */
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 0px;
+    background-image: none;
+    right: 20px;
+    bottom: 20px;
+    /* padding: 24px; */
+    display: block;
+    position: fixed;
+    z-index: 100000;
+}
+  
+  #top:hover{
+    background-color: #151616;
+    
+    
+    
+  }
+
+  #top .icon :hover {
+    color: whitesmoke;
+
+  }
+

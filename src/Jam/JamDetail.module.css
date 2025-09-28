@@ -1,0 +1,213 @@
+/*제목&소개글 묶은 박스*/
+.title {
+  width:1120px;
+  /* float: left; */
+  border: 2px solid #d9d9d9;
+  margin-top:80px;
+  padding:60px;
+  border-radius: 1rem;
+}
+/*제목*/
+.title h1 {
+font-size: 32px;
+font-weight: 600;
+word-spacing: 2px;
+letter-spacing: 1px;
+}
+
+/* 방 만든 사람 닉네임 */
+.title h3 {
+font-size: 20px;
+font-weight: 400;
+word-spacing: 2px;
+letter-spacing: 1px;
+}
+
+/* 소개글*/
+.title p {
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 1px;
+word-spacing: 2px;
+}
+/*플레이버튼 박스*/
+.playbox{
+  /* width:1120px;
+  height:80px;
+  float: left; */
+  /* margin-left:550px; */
+  margin-top: 32px;
+  text-align: end;
+}
+/*플레이버튼*/
+.playbutton {
+  width:60px;
+  height:60px;
+}
+/*잼(악기들),첨부란을 한번에 묶는 박스*/
+.jam {
+  width:1120px;
+  padding:40px;
+  border:2px solid #d9d9d9;
+  float:left;
+  border-radius: 1rem;
+  margin: 12px 0px 40px 0px;
+}
+/*악기 이미지*/
+.instrument {
+  width:60px;
+  height:60px;
+}
+/*첨부구역 div*/
+.input {
+  margin:40px 0px 0px 0px;
+  
+  
+}
+/*첨부란에 음표 */
+.singlenote {
+  width:60px;
+  height:80px;
+  margin-right: 100px;
+  padding-top:20px;
+}
+/*인풋창*/
+.musicinput {
+  width:700px;
+  /* height:30px; */
+  /* margin-bottom: 20px; */
+  border-radius: 0.5rem;
+  border: 0.5px solid #d9d9d9;
+  /* margin-left:90px */
+  padding: 5px;
+  font-size: 14px;
+  margin-left: 100px;
+  color: #141515;
+  cursor: pointer;
+
+  /* background-color: #d9d9d9; */
+  /* vertical-align: bottom; */
+}
+/*첨부&등록 버튼*/
+.music {
+  /* margin-bottom: 20px; */
+
+  width:60px;
+  height:28px;
+  border:none;
+  border-radius: 0.5rem;
+  margin-left: 10px;
+  position: relative;
+  /* bottom: 20px; */
+  top: 1px
+  /* cursor: pointer; */
+
+}
+
+.music:last-child {
+  background-color: lightblue;   
+  color: aliceblue;
+
+}
+
+.checkbox {
+  appearance: none;
+  position: relative;
+  border: max(1px, 0.1em) solid gray;
+  border-radius: 1.25em;
+  width: 2.25em;
+  height: 1.25em;
+  margin-left: 980px;
+  margin-bottom: 10px;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  transform: scale(0.8);
+  background-color: gray;
+  transition: left 250ms linear;
+}
+
+.checkbox:checked {
+  background-color: gray;
+  border-color: gray;
+}
+
+.checkbox:checked::before {
+  background-color: white;
+  left: 1em;
+}
+
+.checkbox:disabled {
+  border-color: lightgray;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.checkbox:disabled:before {
+  background-color: lightgray;
+}
+
+.checkboxdisabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.checkbox:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) solid tomato;
+}
+
+.checkbox:enabled:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+}
+
+
+.comments {
+  border-bottom: solid #EAEAEA 0.5px
+}
+.comment {
+  float:left;
+  margin-top:40px;
+  font-size:20px;
+  margin-bottom: 40px;
+  margin-left:40px;
+  width:1200px;
+}
+.line {
+  width: 1200px;
+  height: 2px;
+  background: #D9D9D9;
+  float: left;
+  margin-top:40px;
+
+  }
+  .finish{
+    height:36px;
+    width:60px;
+    border-radius: 0.5rem;
+    border:none;
+    background-color: lightblue;
+    font-size:16px;
+    color: #f6f6f6;
+    margin-left: 10px;
+  }
+  
+  .writeComment{
+    width:836px;
+    height:36px;
+    border-radius: 0.5rem;
+    border: 0.5px solid #d9d9d9;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 52px;
+    padding-left:12px;
+    outline:none;
+
+
+  }

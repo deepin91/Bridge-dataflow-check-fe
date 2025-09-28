@@ -1,0 +1,218 @@
+.backbutton {
+    width: 64px;
+    height:64px;
+    display: block;
+}
+.back {
+    margin-top:160px;
+    width: 64px;
+    height: 64px;
+    float:left;
+}
+/*작성자 정보 div*/
+.writer {
+    float:left;
+    width:1116px;
+    height: 80px;
+    margin-top:150px;
+    padding-left:20px;
+}
+/*작성자 프로필사진*/
+.writerimg {
+    width: 70px;
+    height:70px;
+    background-color: aliceblue;
+    border: 1px solid #d9d9d9;
+    border-radius: 70%;
+    float:left;
+}
+/*작성자 닉네임 */
+.writer p {
+    float:left;
+    font-size:20px;
+    margin:28px;
+    
+}
+/*이미지 div*/
+.imgbox {
+    margin:60px;
+    width:580px;
+    height:700px;
+    border:2px solid #ebebeb;
+    float:left;
+    overflow:hidden;
+    border-radius: 1rem;
+    text-align: center;
+    
+}
+/*이미지(div안에 이미지 가운데정렬 해야함)*/
+.imgbox img {
+    width:100%;
+    height:700px;
+    margin: auto 0;
+   
+}
+/*내용 div*/
+.content {
+    margin:60px 0px 20px 0px;
+    width:470px;
+    height:580px;
+    float:left;
+    border-bottom:2px solid#d9d9d9;
+ 
+    text-align: center;
+    padding:0px 10px 24px 10px;
+}
+/*제목*/
+.title {
+    height: 60px;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 10px;
+}
+.content h2 {
+    font-size:22px;
+    text-align:left;
+    margin:8px 10px 8px 40px;
+   
+} 
+/*작성일*/
+.date {
+    height:50px;
+    margin-top:10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    
+}
+.date p {
+    color:#616161;
+}
+/*기간 */
+.duration {
+    height:50px;
+    margin-top:32px;
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+/*금액*/
+.pay {
+    height:60px;
+    margin-top:32px;
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+.content p{
+    color: #303030;
+    margin:8px 40px;
+    text-align:left;
+}
+
+/*태그들을 묶는 박스*/
+.taglist {
+    margin:40px 0px 20px 0px;
+    padding:20px 40px;
+    width:auto;
+    
+}
+/*태그들*/
+.tags{
+    
+    width:auto;
+    padding:6px 12px;
+    border-radius: 1rem;
+    border:2px solid #d9d9d9;
+    font-size:17px;
+    color:#555c66;
+    margin:8px 8px;
+    float: left;
+    /* margin: 0 auto; */
+    display: inline-block;
+}
+/*버튼 div */
+.buttonbox{
+    float:left;
+   width:490px; 
+    margin:0 auto;
+    text-align: center;
+}
+
+.buttonbox button {
+    width:240px;
+    height:48px;
+    /* background-color: #D9D9D9; */
+  
+    font-size:26px;
+}
+/* 버튼 hover*/
+.buttonbox button:hover:after {
+    width: 5%
+}
+.buttonbox button:hover:before {
+    width: 5%
+}
+.buttonbox button:after {
+    content:"";
+    position: absolute;
+    left: 79%;
+    /* bottom: 0; */
+    top:940px;
+    width: 0;
+    height: 3px;
+    background-color: #5b78ac;
+    transition: all .3s;
+}
+.buttonbox button:before {
+    content:"";
+    position: absolute;
+    right: 21%;
+    /* bottom: 0; */
+    top:940px;
+    width: 0;
+    height: 3px;
+    background-color: #5b78ac;
+    transition: all .3s;
+}
+
+/* 삭제버튼 */
+.buttonbox2{
+    float:right;
+   width:500px; 
+    margin:0 auto;
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.buttonbox2 button {
+    width:60px;
+    height:32px;
+   border-bottom: 2px solid #D9D9D9;
+    font-size:16px;
+    margin-right: 10px; 
+    float: right;
+}
+.buttonbox2 button:hover {
+    font-weight: bold;
+}
+
+
+/*제목/조회수 아래 분리 선*/
+.line {
+    width: 1200px;
+    height: 2px;
+    background: #D9D9D9;
+    float: left;
+    margin:40px 0px;
+}
+/*상세글 div*/
+.detail {
+    float:left;
+    width:1000px;
+    height:auto;
+    margin: 40px 100px;
+    letter-spacing: 0px;
+    line-height : 28px;
+    word-break: keep-all;
+    border:1px solid #d9d9d9;
+    padding:40px;
+    border-radius: 0.4rem;
+    font-size: 17px;
+}

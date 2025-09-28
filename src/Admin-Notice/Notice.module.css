@@ -1,0 +1,175 @@
+/*메뉴 바*/
+.nav {
+    width: 100%;
+    height: 64px;
+    background-color: #212121;
+    /* text-align: center; */
+    overflow: hidden;
+}
+
+/*메뉴 바 안의 메뉴들 묶음*/
+.menu {
+    margin-left: auto;
+    margin-right: auto;
+    height: 64px;
+    text-align: center;
+
+}
+
+/*메뉴 바 안의 메뉴들 개별 */
+.menu li {
+
+    color: white;
+    display: inline-block;
+    width: 160px;
+    /* text-align: center;*/
+    margin: 20px;
+}
+
+.menu li:hover {
+    font-weight: 900;
+    /* text-shadow: white; */
+}
+
+/*게시판 글씨 써진 박스*/
+.box1 {
+    height: 240px;
+    width: 100%;
+ 
+    text-align: center;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.box1 h1 {
+    padding-top: 100px;
+    font-size: 48px;
+}
+
+/*정렬버튼을 묶는 박스*/
+.leftbox {
+    margin-top:30px;
+    float: left;
+}
+
+/*작성일자순 정렬 버튼*/
+.date {
+
+    margin-top: 30px;
+    height: 28px;
+    width: 72px;
+    border: none;
+    border-bottom:3px solid #777777;
+}
+
+/*검색창을 묶는 큰박스*/
+.serchbox {
+    float: right;
+    height: 20px;
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+/*검색창*/
+.search {
+    float: right;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #afafaf;
+    width: 220px;
+    display: inline;
+    margin-right: 32px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    outline: none;
+    /* padding: 0px 8px; */
+}
+
+/*검색창 돋보기 이미지*/
+.searchImg {
+    /* margin-top:24px; */
+    float: right;
+    width: 24px;
+    height: 24px;
+   right: 35px;
+   bottom: 32px;
+    position: relative;
+}
+
+/*작성 버튼 박스 */
+.write {
+    height:50px;
+    float:left;
+    width:600px;
+ padding-top:60px;
+    
+}
+/* 작성 버튼*/
+.write button{
+    
+    width:70px;
+    height:36px;
+    font-size:16px;
+    
+}
+/*작성 버튼*/
+.writebutton{
+    border-bottom:3px solid #979797 ;
+    color: rgb(0, 0, 0);
+}
+
+/*게시글 묶음 박스*/
+.noticebox {
+    border-top: 2px solid #979797;
+    border-bottom: 2px solid #979797;
+    float: left;
+    width:1168px;
+      margin-top: 20px;
+    margin-bottom: 60px;
+}
+/*게시글 리스트*/
+.list {
+    /* margin:4px; */
+    border-top: 1px solid #c4c4c4;
+    width: 1168px;
+    height: 42px;
+    float: left;
+    /* padding-top: 30px; */
+    /* padding-bottom: 5px; */
+    /* margin-right:32px; */
+    padding-left: 12px;
+    display: block;
+
+}
+
+/*게시글 리스트 속 글씨*/
+.list a {
+    color: black;
+    /* padding-left: 60px; */
+    padding-right: 36px;
+    padding-top: 6px;
+    font-size: 16px;
+    display: inline-block;
+}
+/*제목*/
+.title {
+    padding-left: 20px;
+   line-height: 26px;
+}
+
+/*작성자*/
+.writer {
+    float:right
+}
+
+/*페이지*/
+.page {
+    float: left;
+
+    padding: 40px 48%;
+    
+}
+.page button {
+    font-size: 18px;
+    
+}

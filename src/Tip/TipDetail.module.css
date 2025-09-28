@@ -1,0 +1,225 @@
+.backbutton {
+    width: 64px;
+    height: 64px;
+    display: block;
+}
+
+.back {
+    margin-top: 160px;
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+
+.title {
+    float: left;
+    height: 60px;
+    width: 1000px;
+    margin-top: 160px;
+    margin-left: 40px;
+}
+
+.title h1 {
+    font-size: 24px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.title p {
+    font-size: 14px;
+}
+
+/*제목/조회수 아래 분리 선*/
+.line {
+    width: 1200px;
+    height: 2px;
+    background: #D9D9D9;
+    float: left;
+    margin-top: 40px;
+
+}
+
+/*콘텐츠 박스*/
+.content {
+    width: 1200px;
+    height: auto;
+    border: 1px solid #d9d9d9;
+    float: left;
+    margin: 60px auto 20px auto;
+    padding: 40px;
+    border-radius: 0.5rem;
+    /* display: block; */
+}
+
+/* 콘텐츠 안의 글자*/
+.content p {
+    letter-spacing: 0px;
+    line-height: 28px;
+    font-size: 17px;
+    font-family: 'SUITE-Regular';
+}
+
+/* 좋아요 하트를 담는 div */
+.heartbox {
+    float:left;
+    margin-top:20px;
+    margin-left: 280px;
+}
+.heartbox i {
+    font-size:40px;
+}
+
+/*좋아요부분 박스 */
+.likesBox {
+    padding: 20px;
+    background-color: rgb(255 238 197 / 30%);
+    border-bottom: 1px dotted #151616;
+}
+
+/*좋아요 하트 버튼*/
+.heartSection-button {
+    color: #DB124C;
+    border: 0;
+    background-color: transparent;
+    font-size: 48px;
+    line-height: 28px;
+}
+
+/*Likes 글자 */
+.likes {
+    font-size: 20px;
+}
+
+
+/* 수정&삭제를 담는 div*/
+.editbox {
+    float: right;
+    margin-top: 30px;
+    width: 520px;
+
+}
+
+.editbox ul li {
+    float: right;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.editbox ul li:hover {
+    font-weight: bold;
+}
+
+.editbox a {
+    color: black;
+}
+
+/*댓글 글자 div*/
+.comment {
+    float: left;
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 32px;
+    margin-left: 12px;
+    width: 1200px;
+}
+
+/*댓글들 개별*/
+.text {
+    width:800px;
+    float:left;
+    height:auto;
+    display: block;
+}
+/*덧글 닉네임 블럭*/
+.comments p {
+    margin-left: 40px;
+    float: left;
+    width: auto;
+    display: block;
+    /* background-color: #D9D9D9; */
+    padding: 12px;
+    border-radius: 0.5rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+/*덧글 작성칸 div*/
+.input {
+    width: 1200px;
+    float: left;
+    padding: 32px 80px;
+}
+
+/*덧글 작성 인풋칸*/
+.writeComment {
+    width: 908px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    margin: 0 auto;
+    outline: none;
+    padding:0px 12px;
+}
+
+/* 덧글 작성 버튼 */
+.finish {
+    height: 40px;
+    width: 60px;
+    /* position: relative; */
+    /* right:100px; */
+    border-bottom: 2px solid #d9d9d9;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 16px;
+    color: rgb(22, 22, 22);
+    margin-left: 30px;
+    background-color: none;
+}
+
+.finish:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.comments {
+    border-top: dotted #dadada 1px;
+    min-height: 40px;
+    height:auto;
+    float:left;
+    display: inline-block;
+    width: 1000px;
+    margin-Left: 80px;
+    height: auto;
+    line-Height: 32px; 
+}
+
+/* .comments :first-of-type{
+    border-top: none;
+    height: 100px;
+} */
+.com div:first-child {
+    border-top: none;
+}
+
+
+.Heart {
+
+    position: relative;
+    width: 80px;
+    height: 40px;
+    padding-right: 30px;
+    /* color: #DB124C; */
+}
+
+.HeartAfter {
+    text-align: center;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    padding-right: 30px;
+    color: #DB124C;
+}

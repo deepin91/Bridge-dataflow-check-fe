@@ -1,0 +1,405 @@
+.firstPage {
+    width: 500px;
+    margin: 0px auto;
+}
+
+.firstPage .list {
+    background-color: #6a6a6a;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+    height: 800px;
+}
+
+.firstPage .listTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.firstPage .partnerProfile {
+    /* border: 3px solid aqua; */
+    margin-top: 15px;
+    height: 100px;
+}
+
+.firstPage .partnerProfile .img {
+    /* border: 3px solid; */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.firstPage .partnerProfile .profileBox {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 7px;
+}
+
+
+.firstPage .partnerProfile .nickname {
+    text-align: left;
+    /* border: 3px solid; */
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    /* margin-bottom: 3px; */
+}
+
+.firstPage .partnerProfile .tag {
+    text-align: left;
+    /* border: 3px solid; */
+    margin-top: 3px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.list {
+    background-color: #6a6a6a;
+    width: 292px;
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+    height: 680px;
+}
+
+.listTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.partnerProfile {
+    /* border: 3px solid aqua; */
+    margin-top: 15px;
+    height: 70px;
+}
+
+.partnerProfile .img {
+    /* border: 3px solid; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.partnerProfile .profileBox {
+    width: 150px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 75px;
+    margin-top: 7px;
+}
+
+
+.partnerProfile .nickname {
+    text-align: left;
+    /* border: 3px solid; */
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    /* margin-bottom: 3px; */
+}
+
+.partnerProfile .tag {
+    text-align: left;
+    /* border: 3px solid; */
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.doing {
+    background-color: #d9d9d9;
+    width: 1200px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+    min-height: 782px;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+.doingTitle {
+    font-size: 40px;
+    font-weight: bold;
+    /* border: 3px solid; */
+    margin-bottom: 35px;
+    text-align: center;
+    padding-top: 30px;
+    height: 50px;
+}
+
+.doingProgress {
+    font-size: 18px;
+    text-align: center;
+    /* border: 3px solid; */
+    /* margin-top: 5px; */
+    height: 25px;
+}
+
+.doingTag {
+    font-size: 15px;
+    text-align: center;
+    /* border: 3px solid; */
+    height: 20px;
+}
+
+.payBox {
+    width: 995px;
+    margin: 25px auto 15px;
+}
+
+.payDate {
+    font-size: 10px;
+    /* border: 3px solid; */
+    font-weight: bold;
+}
+
+
+.payList {
+    /* border: 3px solid; */
+    height: 50px;
+    background-color: #848484;
+    border-radius: 5px;
+
+}
+
+.payList .img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    float: left;
+    font-size: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.payList .sender {
+    float: left;
+    margin-left: 5px;
+    padding-top: 14px;
+    /* background-color: antiquewhite; */
+    color: white;
+}
+
+.payList .money {
+    /* background-color: aqua; */
+    width: 420px;
+    margin-left: 120px;
+    padding-top: 15px;
+    color: white;
+    float: left;
+}
+
+.contentBox {
+    width: 995px;
+    margin: 0px auto 5px;
+}
+
+.contentTop::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.contentDate {
+    font-size: 10px;
+    font-weight: bold;
+    width: 700px;
+    float: left;
+}
+
+.contentEdit {
+    width: 100px;
+    float: left;
+    text-align: right;
+    font-size: 17px;
+    margin-left: 145px;
+}
+
+.contentDelete {
+    width: 50px;
+    float: left;
+    font-size: 17px;
+    text-align: right;
+}
+
+.contentBox > .content {
+    background-color: #848484;
+    min-height: 50px;
+    height: auto;
+    border-radius: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.content .img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    float: left;
+    font-size: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.content .writer {
+    float: left;
+    margin-left: 5px;
+    padding-top: 14px;
+    color: white;
+}
+
+.content .main {
+    width: 420px;
+    margin-left: 120px;
+    padding-top: 12px;
+    color: white;
+    line-height: 1.5;
+    /* background-color: antiquewhite; */
+    float: left;
+}
+
+.content .file {
+    /* background-color: aqua; */
+    width: 170px;
+    /* border: 3px solid; */
+    float: left;
+    /* height: 20px; */
+    color: white;
+    line-height: 1.5;
+    padding-top: 12px;
+}
+
+.content .waveForm {
+}
+
+.commentLetter {
+    float: right;
+    /* width: 150px; */
+    margin-right: 100px;
+    padding-top: 17px;
+    color: white;
+    /* background-color: wheat; */
+}
+
+.comment {
+    width: 995px;
+    margin: 0px auto 3px;
+    background-color: #616161;
+    height: 50px;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+.commentIcon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.iconBox {
+    float: left;
+}
+
+.comment .img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    font-size: 5px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.comment .writer {
+    float: left;
+    margin-top: 13px;
+    color: white;
+}
+
+.comment .content {
+    float: left;
+    margin-left: 50px;
+    padding-top: 12px;
+    color: white;
+    /* line-height: 1.5; */
+}
+
+.comment .delete {
+    float: right;
+    padding-top: 12px;
+    margin-right: 100px;
+    /* background-color: antiquewhite; */
+    color: white;
+    font-size: 12px;
+}
+
+.contentBox .commentWriteBox {
+    width: 995px;
+    height: 50px;
+    background-color: #848484;
+    border-radius: 5px;
+}
+
+.contentBox .commentWrite {
+    width: 700px;
+    height: 30px;
+    /* display: block; */
+    margin: 12px 0px 0px 100px;
+    /* background-color: aliceblue; */
+    border-radius: 5px;
+    float: left;
+}
+
+.contentBox .submit {
+    /* display: block; */
+    float: left;
+    margin-left: 30px;
+    margin-top: 15px;
+    color: white;
+}
+
+.upload {
+    width: 60px;
+    background-color: #616161;
+    height: 35px;
+    border-radius: 5px;
+    /* margin-left: 950px; */
+    /* float: left; */
+    position: absolute;
+    left: 940px;
+    bottom: 50px;
+
+}
+
+.complete {
+    position: absolute;
+    width: 80px;
+    background-color: #616161;
+    height: 35px;
+    left: 1010px;
+    bottom: 50px;
+    border-radius: 5px;
+}

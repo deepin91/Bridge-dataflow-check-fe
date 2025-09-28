@@ -1,0 +1,594 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+/* * {
+    box-sizing: border-box;
+  }
+   */
+  .body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    /* border: 1px solid rgba(0,0,0,.15); */
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #f9f9fa; */
+    overflow: hidden;
+  }
+  
+  .container {
+    border: 1px solid rgba(0,0,0,.15);
+    /* border-radius: 10px; */
+    /* box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc; */
+    position: absolute;
+    max-width: 800px;
+    min-height: 450px;
+    overflow: hidden;
+  }
+  
+  
+  .form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    width: 600px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .basicBox2{
+    width:100%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    /* padding: 0 50px; */
+  }
+
+
+  .idBox{
+    width:100%;
+    /* display: flex; */
+    /* justify-content:flex-start; */
+    align-items:center;
+    margin-right: 2px;
+    padding: 0 55px;
+    /* margin-top: 5px; */
+  }
+
+  .idInputBox {
+    
+    background: #F6f6f6;
+    /* opacity: 0.7; */
+    padding: 16px;
+    font-size: 14px;
+    /* text-align: ; */
+    margin: 5px 0;
+    /* margin-right: 10px; */
+    width: calc(70% - 10px);
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+  .idInputBox:first-child {
+    margin-right: 10px;
+  }
+
+    .idCheckButton{
+    float: right;
+    background:#3c3e58;
+    /* border-color: #000; */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 16px;
+    width: 30%;
+    margin: 5px 0;
+    /* height: 45px; */
+    /* border: 1px; */
+    outline: none;
+    border-radius: 5px;
+    /* background: url(free-icon-check-list-5973568.png); */
+    /* background: url(Alert.png); */
+    }
+  
+  .warningMessage{
+    display: inline-block;
+    font-size: 14px;
+    text-align:left;
+    color: #828282;
+    /* color: #ff1818; */
+    margin-top: 5px;
+    margin-left: 4px;
+    margin-right: 10px;
+
+  }
+  .border2{
+    border: black; 
+    margin-bottom: 2; 
+    height: 12; 
+    padding-left:2; 
+    width:300px; 
+    /* md:w:500px; 
+    md:text-xl;  */
+    outline: none;
+  }
+
+
+  .warningBox{
+    width:100%;
+    display: flex;
+    /* justify-content:first baseline; */
+    align-items:left;
+    text-align:left;
+    flex-direction:column;
+    /* flex-grow: ; */
+    margin-right: 2px;
+    padding: 0 55px;
+  }
+
+  /* .UnLock{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 41%;
+      margin-left: 400px;
+      width: 18px;
+      height: 24px;
+      margin-top: -200px;
+      background-image: url('UnLock.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 18px 24px;
+      cursor: pointer;
+  } */
+
+  .Locked{
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-left: -30px;
+    width: 18px;
+    height: 24px;
+    margin-top: -47px;
+    background-image: url('UnLock.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 18px 24px;
+    cursor: pointer;
+}
+/* 
+
+.UnLock2{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 41%;
+  margin-left: 400px;
+  width: 18px;
+  height: 24px;
+  margin-top: -45px;
+  background-image: url('UnLock.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 18px 24px;
+  cursor: pointer;
+} */
+
+.Locked2{
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  margin-left: -30px;
+  width: 18px;
+  height: 24px;
+  margin-top: -45px;
+  background-image: url('UnLock.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 18px 24px;
+  cursor: pointer;
+}
+  
+
+
+  .pwWarningMessage{
+    /* display: inline-block; */
+    font-size: 14px;
+    text-align:left;
+    color: #828282;
+    /* color: #ff1818; */
+    /* margin-top: 3px; */
+    margin-left: 4px;
+    margin-right: 10px;
+  }
+
+  .basicBox{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    /* padding: 0 50px; */
+  }
+
+  label{
+    width:100%;
+    display: center;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom:15px;
+    /* padding: 0 50px; */
+  }
+
+  .passwordBox{
+    width:100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    margin-top: 10px;
+    padding: 0 55px;
+  }
+
+
+  .formInput {
+    position:relative;
+    background: #F6f6f6;
+    font-size: 14px;
+    padding: 16px;
+    /* margin: 5px 0; */
+    margin-bottom: 15px;
+    width: 430px;
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+
+
+
+  .nameInput {
+    background: #F6f6f6;
+    font-size: 14px;
+    padding: 16px;
+    margin: 5px 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 430px;
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  .NumberBox{
+    width:100%;
+    display: flex;
+    justify-content:first baseline;
+    align-items:center;
+    /* flex-direction:column; */
+    /* flex-grow: ; */
+    margin-bottom: 30px;
+    margin-right: 2px;
+    padding: 0 55px;
+  }
+
+  .selectNumberBox {
+    color: #6d6d6d;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    margin: 5px 0px;
+    width: 35%;
+    height: 45px;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0px 5px;
+    display: flex;
+    /* justify-content: 'center'; */
+    /* align-items: center; */
+    /* position: absolute; */
+    /* width: 100%; */
+    left: 0;
+    background: white;
+    border: 1px solid rgba(0,0,0,.12);
+    /* box-shadow: 0 1px 1px 0 #00000026; */
+  }
+  .selectNumberBox:first-child {
+    margin-right: 10px;
+  }
+  
+  .NumberBoxInput{
+    background: #F6f6f6;
+    /* opacity: 0.7; */
+    font-size: 14px;
+    padding: 16px;
+    margin: 5px 0;
+    height: 45px;
+    width: 100%;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+
+
+   /* 로그인 회원가입 사이에 있는 내용 감싼 박스 */
+   .line_or {
+    position: relative;
+    display: block;
+    padding: 3px 0;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 5px;
+  }
+  
+  /* 중앙 실선 (왼쪽) */
+  .line_or_before {
+    display: inline-block;
+    width: 110px;
+    height: 1px;
+    background-color: rgba(0,0,0,.08);
+    vertical-align: top;
+    content: "";
+  }
+  
+  /* 실선 안에 있는 텍스트 */
+  .txt_or {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    color: #828282;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  /* 중앙 실선 (오른쪽) */
+  .line_or_after {
+  
+    display: inline-block;
+    width: 110px;
+    height: 1px;
+    /* margin: 8px 0; */
+    background-color: rgba(0,0,0,.08);
+    vertical-align: top;
+    content: "";
+  }
+  
+
+
+  .MailBox{
+    width:100%;
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    margin-right: 2px;
+    padding: 0 55px;
+    /* margin-top: 5px; */
+  }
+  
+  
+  .mailBoxInput{
+    background: #F6f6f6;
+    /* opacity: 0.7; */
+    padding: 16px;
+    font-size: 14px;
+    /* margin: 5px 0; */
+    margin-right: 10px;
+    width: 65%;
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .selectMailBox {
+    color: #6d6d6d;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 5px 0px;
+    width: 35%;
+    height: 45px;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0px 5px;
+    border: 1px solid rgba(0,0,0,.12);
+    /* letter-spacing: 0.3px; */
+  }
+
+  .CodeButton{
+    background: #3c3e58;
+    /* border-color: #000; */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 16px;
+    margin: 5px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 430px;
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+   
+  }
+
+  .codeInput{
+    background: #F1F3F4;
+    /* opacity: 0.7; */
+    font-size: 14px;
+    padding: 0 30px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+
+  
+
+  .find {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .infoBox{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    margin-bottom: 15px;
+  }
+
+  .infoBox2{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+  }
+
+  .mailBox{
+    width:73%;
+    display: flex;
+    /* justify-content: center; */
+    align-items:flex-start;
+    flex-direction:row;
+    margin-top: 15px;
+    padding: 0 55px;
+  }
+
+  .registrationButton{
+    
+    color :#ffffff;
+    background-color: #1877f2;
+    border-color: #1877f2;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 16px;
+    margin: 5px 0;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    width: 430px;
+    height: 45px;
+    border: 1px;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .space {
+    opacity: 0.5;
+    background-color: #9e9e9e;
+    
+    border: none;
+    height: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    }
+    
+    .BridgeBlackLogo {
+    height: 28px;
+    /* margin-right: 55px;
+    margin-bottom: 30px; */
+    vertical-align: middle;
+    opacity: 0.85;
+    width: auto;
+    max-width: 100%;
+    border-style: none;
+    width: 182px;
+    height: 72px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  
+    }
+  
+  .sign-up-container {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  
+
+.idCheckBox{
+  background: #eeeeee;
+  border: 1px;
+  border-radius: 5px;
+  margin-right: 3px;
+  margin-left: 2px;
+}
+
+.saveId{
+  color: #636363;
+  font-size: 13px;
+  float: left;
+  width: 100px;
+  height: 20px;
+}
+
+
+
+/* Rectangle 91 */
+
+.Rectangle91{
+position: absolute;
+width: 128.99px;
+height: 43.98px;
+left: 1087px;
+top: 238px;
+
+background: rgba(60, 62, 88, 0.9);
+border-radius: 5px;
+}
+
+/* Rectangle 90 */
+
+.Rectangle90{
+position: absolute;
+width: 300px;
+height: 58px;
+left: 0px;
+top: 142px;
+
+background: rgba(60, 62, 88, 0.9);
+border-radius: 0px 0px 35px 35px;
+}
+
+/* OK */
+
+.alert1{
+position: absolute;
+width: 33px;
+height: 20px;
+left: 134px;
+top: 157px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 27px;
+
+color: #FFFFFF;
+}

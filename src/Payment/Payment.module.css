@@ -1,0 +1,226 @@
+/* 전체 속성 reset */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+/* 전체 묶어주는 박스 */
+.mainBox {
+    width: 645px;
+    height: 800px;
+    margin: 120px auto;
+    /* background-color: #d9d9d9; */
+   border-bottom: 2px solid #b1b1b1;
+    border-top: 2px solid #b1b1b1;
+}
+
+/* '결제' 텍스트 */
+.mainText {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* 신청자 묶어줌 */
+.request {
+    background-color: none;
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+    float: left;
+}
+
+/* '신청자 닉넴' 텍스트 */
+.requestText {
+    font-size: 25px;
+    width: 320px;
+    height: 34px;
+    text-align: center;
+
+}
+/* 신청자 아이콘 */
+.requestImg {
+    width: 120px;
+    height: 120px;
+    margin-left: 100px;
+    margin-bottom: 35px;
+    border-radius:70%;
+}
+
+/* 중간에 화살표 아이콘 */
+.arrowImg {
+    width: 36px;
+    height: 36px;
+    margin-left: 150px;
+    margin-bottom: 75px;
+}
+
+/* 커미션주 묶어줌 */
+.response {
+    background-color: none;
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+    display: inline-block;
+
+}
+
+/* '커미션주 닉넴' 텍스트 */
+.responseText {
+    font-size: 25px;
+    width: 284px;
+    height: 34px;
+    text-align: center;
+}
+
+/* 커미션주 아이콘 */
+.responseImg {
+    width: 120px;
+    height: 120px;
+    margin-left: 85px;
+    margin-bottom: 35px;
+    border-radius:70%;
+}
+
+/* '선지급금' 텍스트 */
+.advanceText {
+    margin-left: 120px;
+    width: 100px;
+    height: 48px;
+    font-size: 16px;
+}
+
+/* 선지급금 입력칸 */
+.advance {
+    margin-left: 230px;
+    border: none;
+    height: 38px;
+    text-align: center;
+    background-color: #d9d9d9;
+}
+
+.payText {
+    text-align: center;
+}
+
+/* '의뢰완료시 결제될 금액' 텍스트 */
+.willPayment {
+    margin-left: 84px;
+    /* width: 100px; */
+    /* height: 48px; */
+    font-size: 16px;
+}
+
+/* 의뢰완료시 금액 입력칸 */
+.willPaymentAm {
+    margin-left: 150px;
+    border: none;
+    height: 38px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+/* 줄 */
+.hr {
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+/* 총 결제금액 텍스트 */
+.total {
+    font-size: 18px;
+    margin-left: 125px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* 총 결제금액 알려주는 칸 */
+.totalPayment {
+    margin-left: 255px;
+    text-align: center;
+}
+
+/* 브릿지 포인트 텍스트 */
+.point {
+    margin-top: 55px;
+    font-size: 14px;
+    margin-left: 125px;
+    margin-bottom: 15px;
+}
+
+/* 포인트 입력하는 칸 */
+.pointInput {
+    margin-left: 125px;
+    border : none;
+    width: 375px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    padding: 0 25px;
+    font-size: 16px;
+    color: black;
+    outline: none;
+}
+
+/* 포인트 입력칸 끝에 있는 'P' 텍스트 */
+.pointP {
+    position: relative;
+    width:auto;
+    display: inline-block;
+    right:36px;
+    color:white;
+    font-size:16px;
+}
+
+/* '보유' 텍스트 */
+.havePoint {
+    margin-top: 8px;
+}
+
+/* 보유포인트 표시 */
+.have {
+    margin-left: 125px;
+    margin-right: 240px;
+    font-size: 14px;
+}
+
+/* '모두사용' 텍스트 */
+.selectText {
+    font-size: 14px;
+}
+
+/* 모두사용 체크하는 체크박스 */
+.selectAll {
+    margin-left: 4px;
+    font-size: 14px;
+    height: 16px;
+    width: 16px;
+}
+
+/* 결제 버튼 */
+.paymentBtn {
+    width: 120px;
+    height: 48px;
+    background-color: #433D3D;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    margin:52px auto 32px auto;
+    display: block;
+}
+
+/* 잔액부족 알림 */
+.paymentNotice {
+    color: #B83838;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 12px;
+    margin-left: 32px;
+}

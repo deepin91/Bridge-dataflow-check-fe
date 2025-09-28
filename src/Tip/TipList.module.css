@@ -1,0 +1,243 @@
+/*게시판 글씨 써진 박스*/
+.box1 {
+  height: 240px;
+  width: 100%;
+  text-align: center;
+  /* border-bottom: 3px solid #d9d9d9; */
+  background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("../img/guitar.jpg");
+  background-size: 100%;
+}
+
+.box1 h1 {
+  color:#f2f2f2;
+  margin: 0px auto;
+  font-size: 52px;
+  padding-top: 90px;
+  /* text-shadow: 4px 2px 2px #1f1f1f; */
+}
+
+.topBox{
+  width:100%;
+  height:100px;
+  /* display:flex; */
+  /* padding: 30px; */
+  /* justify-content: flex-start; */
+  padding: 30px 0;
+}
+
+
+
+/*정렬버튼을 묶는 박스*/
+.leftbox {
+  padding: 30px 0;
+  float: left;
+}
+
+
+/*좋아요순 정렬 버튼*/
+.good {
+  margin-right: 15px;
+  height: 28px;
+  width: 72px;
+  border: none;
+  /* border-bottom:3px solid #686868; */
+}
+
+/*검색창을 묶는 박스*/
+.rightbox {
+  padding: 30px 0;
+  /* float:left; */
+  height:58px;
+  width:100%;
+  /* margin-bottom: 60px; */
+  
+}
+
+/*검색창*/
+.search {
+  float: right;
+  height:28px;
+  border:none;
+  /* background-color: #ebebeb; */
+  border-bottom:3px solid #777777;
+  width:240px;
+  /* display: f; */
+  margin-left: 60px;
+ font-size: 16px;
+  position: relative;
+  
+
+}
+/*검색창 돋보기 이미지*/
+.searchImg {
+  width:18px;
+  height:18px;
+  top: 64px;
+  position: absolute;
+ right:5px;
+}
+
+/*작성 버튼 박스 */
+.write {
+padding-top: 30px;
+margin-right: 2px;
+margin-top: 10px;
+float: right;
+}
+
+/* 작성 버튼*/
+.write button{
+  /* padding: 30px 0; */
+  width:70px;
+  height:28px;
+  font-size:16px;
+  margin-left: 196px;
+}
+/*작성 버튼*/
+.writebutton{
+  /* border-bottom:3px solid #686868 ; */
+  color: rgb(0, 0, 0);
+}
+/*게시글 묶음 박스*/
+.tipbox {
+  margin-top:20px;
+  border-top: 2px solid #777777;
+  border-bottom: 2px solid #777777;
+  float: left;
+  width: 100%;
+}
+/*게시글 리스트*/
+.list {
+
+  border-top:1px solid #acacac;
+  /* width:1168px; */
+  width: 100%;
+  height:44px;
+  float: left;
+  padding: 13px;
+  /* margin-right:32px; */
+  padding-left: 12px;
+
+  
+}
+/*게시글 리스트 속 글씨*/
+.list a {
+  color: black;
+  padding-left: 36px;
+  padding-right: 36px;
+  text-align: center;
+  /* padding-top: 6px; */
+  font-size: 16px;
+  /* display: inline-block; */
+}
+/*작성자*/
+.writer {
+  float:right
+}
+/* ♡ */
+.heart{
+  position: absolute;
+  float: right;
+  right:200px;
+  
+}
+.count {
+  position: absolute;
+  float: right;
+  right:180px;
+}
+
+/*페이지*/
+.pageNum{
+  width: 100px;
+  height: 20px;
+  /* font-size: 18px; */
+  
+}
+
+.page {
+  text-align: center;
+  float: left;
+  padding: 40px 46%;
+  margin: 30px 0;
+}
+
+.pageButton {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing : 0.3rem;
+}
+
+/* 6 */
+/* 6 */
+.btn6 {
+  text-align: center;
+  background: #000;
+ color: #fff;
+ line-height: 30px;
+ padding: 0;
+ border: none;
+}
+.btn6 span {
+ position: relative;
+ display: inline-flex;
+ /* width: 100%; */
+ padding: 0 20px;
+ height: 30px;
+}
+.btn6:before,
+.btn6:after {
+ position: absolute;
+ content: "";
+ height: 28px;
+ width: 2px;
+ background: #000;
+}
+.btn6:before {
+ /* right: 2; */
+ /* top: 30; */
+ transition: all 500ms ease;
+}
+.btn6:after {
+ /* left: 3; */
+ /* bottom: 21; */
+ transition: all 500ms ease;
+}
+.btn6:hover{
+ color: #000;
+ background: transparent;
+}
+.btn6:hover:before {
+ transition: all 500ms ease;
+ height: 28px;
+}
+.btn6:hover:after {
+ transition: all 500ms ease;
+ height: 28px;
+}
+.btn6 span:before,
+.btn6 span:after {
+ position: absolute;
+ content: "";
+ background: #000;
+}
+.btn6 span:before {
+ left: 0;
+ top: 0;
+ width: 0%;
+ height: 2px;
+ transition: all 500ms ease;
+}
+.btn6 span:after {
+ right: 0;
+ bottom: 2px;
+ width: 0%;
+ height: 3px;
+ transition: all 500ms ease;
+}
+.btn6 span:hover:before {
+ width: 100%;
+}
+.btn6 span:hover:after {
+ width: 100%;
+}

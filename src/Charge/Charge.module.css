@@ -1,0 +1,158 @@
+/* 전체 속성 reset */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+/* 메인 박스 */
+.mainBox {
+    width: 600px;
+    height: 600px;
+    /* background-color: #E1E5E9; */
+    margin: 40px auto 60px auto;
+    border-radius: 5px;
+    border:1px solid #d9d9d9;
+}
+
+/* 메인 텍스트 (포인트 충전) */
+.mainText {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #d9d9d9;
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* 첫 줄 박스(현재 보유 포인트, 금액) */
+.possess {
+    width: 450px;
+    height: 80px;
+    margin: 60px auto 60px 90px;
+    display: inline-block;
+    border-bottom: 1px dotted #d9d9d9;
+
+}
+
+/* 첫 줄 텍스트(현재 보유 포인트) */
+.possessText {
+    font-size: 16px;
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 40px;
+}
+
+/* 첫 줄 금액 */
+.possessMoney {
+    font-size: 18px;
+    padding-top: 10px;
+    margin-right: 140px;
+    float: right;
+}
+
+/* 두 번째 줄 박스(충전할 금액, 금액) */
+.charge {
+    width: 450px;
+    height: 70px;
+    margin: 0 auto;
+    /* background-color: aliceblue; */
+    margin-bottom: 10px;
+}
+
+/* 두번째 줄 텍스트(충전할 금액, 원) */
+.chargeText1,
+.chargeText2 {
+    font-size: 16px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* 두번째 줄 텍스트(충전할 금액) */
+.chargeText1 {
+    margin-left: 40px;
+}
+
+/* 두 번째 줄 input박스랑 원 */
+.chargeBox {
+    float: right;
+}
+
+/* 두 번째 줄 원 */
+.chargeText2 {
+    margin-right: 40px;
+    margin-left: 5px;
+}
+
+/* 두 번째 줄 input 박스 */
+.chargeInput {
+    width: 200px;
+    border-radius: 5px;
+    height: 32px;
+    text-align: center;
+    border-style:none;
+    background-color: #f0f0f07c;
+    font-size: 15px;
+}
+
+/* 수평선 */
+.hr {
+    width: 450px;
+    margin: 20px auto 15px;
+    border: 1px solid rgba(95, 95, 95, 0.3);
+}
+
+/* 세번째 줄 박스 */
+.result {
+    width: 445px;
+    height: 40px;
+    margin: 0 auto;
+    /* background-color: aliceblue; */
+    margin-bottom: 20px;
+    margin-top:40px;
+}
+
+/* 세 번째 줄 텍스트(충전 후 예상 포인트, 금액) */
+.resultText1,
+.resultText2 {
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+/* 세 번째 줄 텍스트 (충전 후 예상 포인트) */
+.resultText1 {
+    margin-left: 40px;
+}
+
+/* 세 번재 줄 텍스트(금액) */
+.resultText2 {
+    float: right;
+    margin-right: 40px;
+}
+
+/* 충전하기 버튼 박스 */
+.regist {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: aliceblue; */
+    height: 50px;
+    margin-top: 120px;
+}
+
+/* 충전하기 버튼 */
+.registButton {
+    width: 140px;
+    height: 50px;
+    background-color: rgb(67, 61, 61, 0.7);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}

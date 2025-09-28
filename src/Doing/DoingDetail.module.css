@@ -1,0 +1,268 @@
+/*작업진행 글씨 써진 박스*/
+.box1 {
+    height: 260px;
+    width: 100%;
+ 
+    text-align: center;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.box1 h1 {
+    padding-top: 70px;
+    font-size: 48px;
+}
+.yn {
+    margin-top:40px;
+    font-size: 18px;
+    margin-bottom: 48px;
+}
+.yn span {
+    font-weight: bold;
+}
+.box1 button {
+padding: 0px 20px;
+
+}
+.box1 button:nth-child(1) {
+    border-right: 2px solid #d9d9d9;
+}
+.box1 button:hover {
+    font-weight: bold;
+}
+/*리스트 묶은 박스 */
+.list {
+    width:1200px;
+    min-height: 400px;
+    height:auto;
+    margin:40px auto;
+}
+/*게시글 개별*/
+.listbox {
+    min-height:100px;
+    height:auto;
+    border-bottom: 2px solid #ececec;
+    padding:20px;
+}
+
+/*작성일자*/
+.content p {
+    font-size: 14px;
+    /* float:left; */
+    font-weight: 500;
+    height:60px;
+    display: block;
+}
+/*내용*/
+.mid {
+    width:900px;
+    display: inline-flex;
+    margin-left:20px;
+    line-height: 24px;
+    font-size:16px;
+   
+
+}
+.userid span:nth-child(3) {
+    font-weight:500;
+    
+}
+/*유저 아이디*/
+.userid {
+    /* float: left; */
+    /* width: 1000px; */
+    font-size: 16px;
+    font-weight: 600;
+    /* height:auto; */
+   
+    /* min-height:100px; */
+}
+.userid span:first-child {
+    width:100px;
+    display: inline-block;
+}
+.userid .p {
+    margin-left: 800px;
+    display: inline-block;
+   
+}
+
+/*웨이브폼 div  */
+.wave {
+    width:800px;
+    /* float: left; */
+}
+/*삭제수정덧글*/
+.btn {
+    height:60px;
+    width:auto;
+    /* float:left; */
+    padding-top:20px;
+    text-align: right;
+    
+}
+.btn button:first-child {
+    border:none;
+}
+.btn button:nth-child(2) {
+  
+    height:40px;
+}
+.btn button:nth-child(3) {
+   
+    height:40px;
+}
+.btn button:nth-child(4) {
+    border-bottom: 2px solid #d9d9d9;
+    height:40px;
+}
+.btn button:nth-child(5) {
+    border-bottom: 2px solid #d9d9d9;
+    height:40px;
+}
+.btn button:hover {
+    font-weight:bold;
+}
+
+.commentInput {
+    text-align: center;
+
+}
+
+.input {
+    width: 800px;
+    border-radius: 5px;
+    border: 0.5px #e4e4e4 solid;
+    box-shadow: 2px 2px 2px 2px #f6f6f6;
+    float: left;
+    margin-left:130px;
+    padding:0px 8px;
+    height:32px;
+}
+
+/*덧글 */
+.comment {
+    /* margin-top:20px; */
+    /* float:right; */
+}
+/*덧글 작성 이모티콘*/
+.send {
+    float: left;
+    border-bottom: 0px;
+    
+}
+.send button {
+    
+}
+/*웨이브폼*/
+.wave img {
+    display: none;
+}
+.wave label {
+    display: none;
+}
+.wavebox {
+    /* width:600px; */
+    margin-bottom:0;
+
+}
+.left {
+    margin:0;
+}
+/*웨이브폼박스*/
+.content {
+    /* min-height:80px; */
+    height:auto;
+    width:auto;
+    /* float: left; */
+    line-height: 2;
+    /* margin-top: 20px; */
+    margin: 20px 0px 0px 0px;
+}
+.wave span {
+    font-weight: 500;
+    font-size:15px;
+}
+/*코멘트 작성 부분*/
+.writecontent {
+    width:1160px;
+    float:left;
+    min-height:40px;
+    height:auto;
+    margin:40px 0px 40px 40px;
+    
+}
+.contentin {
+      width: 600px;
+    border-radius: 5px;
+    border: 0.5px #e4e4e4 solid;
+    box-shadow: 2px 2px 2px 2px #f6f6f6;
+    float: left;
+    margin-left:104px;
+    padding:0px 8px;
+    min-height:40px;
+    height:auto;
+}
+.filein {
+    float:left;
+    width:200px;
+    margin: 0 20px;
+    background-color: #f1f1f1;
+    height:40px;
+    text-align: center;
+    border-radius: 5px;
+    padding:10px 48px;
+}
+.filein:hover {
+    cursor: pointer;
+}
+.writebtn {
+    float: right;
+    border-bottom: 2px solid #d9d9d9;
+    font-size: 18px;
+    width:60px;
+    height:40px
+}
+.writebtn:hover {
+    font-weight:bold;
+    
+}
+/*수정*/
+.filename {
+    float:left;
+    width:200px;
+    margin: 0 20px;
+    background-color: #f1f1f1;
+    height:auto;
+    font-size:14px;
+    border-radius: 5px;
+    font-weight: 500;
+   
+}
+.contentin2 {
+    width: 600px;
+  border-radius: 5px;
+  border: 0.5px #e4e4e4 solid;
+  box-shadow: 2px 2px 2px 2px #f6f6f6;
+  float: left;
+  margin-left:124px;
+  padding:0px 8px;
+  min-height:40px;
+  height:auto;
+  margin-top:20px;
+  font-weight: 500;
+}
+.filein2 {
+  float:left;
+  width:200px;
+  margin: 0 20px;
+  background-color: #f1f1f1;
+  height:40px;
+  text-align: center;
+  border-radius: 5px;
+  padding:10px 48px;
+  margin-top:20px;
+  font-weight: 500;
+}
+.cancel {
+    margin-left:10px;
+}

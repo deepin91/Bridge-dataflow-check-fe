@@ -1,0 +1,303 @@
+/* 전체 속성 reset */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+/* 스크롤바 기능은 존재하나 화면에 안 보이게 하는 코드 */
+body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
+
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+/* 메인 박스 */
+.mainBox {
+    width: 1200px;
+    height: 640px;
+    margin: 100px auto;
+}
+
+/* 채팅 목록 박스 */
+.chatListBox {
+    width: 404px;
+    height: 630px;
+    /* background-color: rgb(241,241,241,0.5); */
+    border: 2px solid rgb(241,241,241,1);
+    border-right: none;
+    border-radius: 4px;
+    float: left;
+    overflow-y: scroll;
+
+}
+
+/* 채팅 박스 */
+.chatBox {
+    width: 720px;
+    height: 630px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    border: 2px solid rgb(241,241,241,1);
+    border-radius: 6px;
+}
+
+/* 채팅 목록 텍스트 */
+.chatListText {
+    font-size: 28px;
+    /* padding-top: 50px; */
+    /* padding-left: 120px; */
+    /* margin-bottom: 30px; */
+    padding: 32px;
+    font-family: 'SUITE-Regular';
+    background-color: #FFF;
+    position: sticky;
+    top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #f5f5f5;
+}
+
+/* 채팅 목록 수평선 */
+.hr {
+    width: 200px;
+    margin: 0 auto;
+    border-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+    
+}
+/*리스트 프로필*/
+.chatListprofile {
+   
+}
+/* 프로필 박스 */
+.profile {
+    margin: 10px 0px;
+    height: 82px;
+    border-bottom:1px solid #EAEAEA;
+    padding-top:15px;
+    cursor: pointer;
+}
+
+/* 프로필 내 이미지 박스 */
+.profileImg{
+    float: left;
+    margin-left: 30px;
+    width: 32px;
+    height: 32px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+/* 프로필 내 이미지 아이콘 */
+.profileIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 프로필 내 컨텐츠 박스 */
+.profileContent {
+    padding-left: 90px;
+    padding-top: 3px;
+    font-size: 16px;
+    font-family: 'SUITE-Regular';
+}
+
+/* 위 컨텐츠 박스 내 닉네임 */
+.profileName {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'SUITE-Regular';
+}
+
+/* 채팅 박스 최상위 텍스트 박스 */
+.topText {
+    padding: 20px 0 0 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #EAEAEA;
+}
+
+.receiver {
+    /* padding-left: 20px; */
+    /* padding-bottom: 10px; */
+    /* float: left; */
+    width: 48px;
+    height: 48px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+
+/*  위 텍스트 박스 내 아이콘 */
+.chatProfile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 위 텍스트 박스 닉네임 텍스트 */
+.chatName {
+    /* display: inline-block; */
+    font-size: 24px;
+    /* margin-bottom: 12px; */
+    margin-left: 60px;
+    position: relative;
+    top: -36px;
+    font-family: 'SUITE-Regular';
+    width: 600px;
+}
+
+/* 채팅 수평선 */
+.chatHr {
+    /* width: 380px; */
+    margin: 0 auto;
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 실제 채팅 박스 */
+.chat {
+    /* width: 700px; */
+    /* height: 475px; */
+
+    /* margin: 25px auto; */
+    border-radius: 5px;
+}
+
+/* 수신자(발신자인 것 같은데?) 채팅 내용 */
+.chatContent1 p {
+    padding:8px;
+    float:right;
+    min-width: 100px;
+    max-width: 300px;
+    min-height: 32px;
+    height:auto;
+    background-color: #E1E9F2;
+    border-radius: 10px;
+    display: inline-block;
+    border-radius: 14px 14px 0px 14px;
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+    line-height: 26px;
+}
+.chatContent1 {
+    width: 660px;
+    min-height:32px;
+    height:auto;
+    display: inline-block;
+    margin:8px 0px;
+    word-wrap:break-word;
+   
+}
+
+/* 발신자 채팅 박스 */
+.chatRequest {
+    float: right;
+}
+
+/* 발신자(수신자인 것 같은데?) 채팅 내용 */
+.chatContent4 p {
+    padding:8px;
+    float:left; 
+    max-width: 300px;
+    min-width: 100px;
+    min-height: 32px;
+    height:auto;
+    background-color: #fafbfd;
+    border-radius: 14px 14px 14px 0px;
+    word-wrap: break-word;
+    font-family: 'SUITE-Regular';
+    font-size:18px;
+    line-height: 26px;
+}
+.chatContent4 {
+    width:600px;
+    height:32px;
+    margin:8px 0px 10px 30px;
+    display: inline-block;
+    word-wrap:break-word;
+}
+/* 채팅 칸 박스 */
+.chatFoot {
+    display: block;
+    content: '';
+    clear: both;
+    /* position: relative; */
+    /* margin-top: 32px;  */
+    /* margin-left:32px; */
+    height: 66px;
+    background-color: #F2F5F9;
+}
+
+/* 채팅 칸 박스 내 거래하기 아이콘 버튼 */
+.handButton {
+    /* width: 24px; */
+    /* height: 24px; */
+    /* margin-right: 8px; */
+    position: relative;
+    right: 100px;
+    top: 6px;
+}
+
+/* 채팅 칸 박스 내 거래하기 */
+.handIcon {
+    width: 22px;
+    height: 22px;
+}
+
+/* 채팅 칸 박스 내 전송버튼 */
+.sendButton {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    /* right: 84px; */
+    /* top:6px; */
+    left: 624px;
+    bottom: 42px;
+    background: #2367E2;
+    border-radius: 6px;
+    box-shadow: 0px 3px 1px 1px #f6f6f6;
+}
+
+/* 채팅 칸 박스 내 전송 아이콘 */
+.sendIcon {
+    width: 30px;
+    height: 30px;
+}
+
+/* 채팅 칸 input 박스 */
+.chatInput {
+    width: 640px;
+    height: 48px;
+    border-radius: 10px;
+    /* background-color: #fcfcfc; */
+    border: none;
+    /* margin: 16px; */
+    /* margin-top: 30px; */
+    margin-left: 36px;
+    font-family: 'SUITE-Regular';
+    font-size: 16px;
+    padding:0px 12px;
+    box-shadow: 0px 5px 3px 3px #f6f6f6;
+}
+.chatbox{
+    overflow-y:auto;
+    /* overflow-x: ; */
+    /* width:700px; */
+    height:468px;
+    background-color: #F2F5F9;
+}
+.shortChat {
+    display: block;
+}

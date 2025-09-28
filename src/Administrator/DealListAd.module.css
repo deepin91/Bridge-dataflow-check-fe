@@ -1,0 +1,230 @@
+/* 전체 속성 reset */
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin:0px;
+    padding: 0px;
+    color: #000;
+  }
+
+/* 메인 박스 */
+.mainBox {
+    width: 1200px;
+    height: 780px;
+    /* background-color: #f5f5f5af; */
+    margin: 60px auto;
+    /* border-radius: 15px; */
+}
+
+/* 메인 텍스트(거래 내역) */
+.mainText {
+    text-align: center;
+    color:#383838;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+/* 거래일자 박스 */
+.dealDate {
+    width: 600px;
+    height: 40px;
+    /* margin: 0px auto; */
+    margin-bottom: 10px;
+    margin-top:20px;
+    float:left;
+    margin-bottom: 60px;
+}
+
+/* 거래일자 택스트 */
+.dealDate p {
+    display: inline-block;
+    margin-left: 20px;
+    border-right:2px solid #d9d9d9;
+    padding:10px;
+    padding-right: 20px;
+}
+
+/* 거래 일자 input 첫번째 박스 */
+.dealInput1 {
+    width: 120px;
+    margin-left: 20px;
+    /* font-size: 10px; */
+}
+
+/* 거래일자 input 두번째 박스 */
+.dealInput2 {
+    width: 120px;
+}
+
+/* 거래일자 박스 내 3개월, 6개월 버튼 */
+.dealButton1, .dealButton2 {
+    width: 56px;
+    height: 30px; 
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    margin-left: 16px;
+    margin-top: 7px;
+}
+
+/* 검색하기 박스 */
+.search {
+    width: 600px;
+    height: 40px;
+    /* margin: 0px auto; */
+    border-radius: 5px;
+    float:left;
+    margin-top:20px;
+    margin-bottom: 60px;
+
+}
+
+/* 검색하기 텍스트 */
+.search p {
+    display: inline-block;
+    margin-left: 20px;
+    border-right:2px solid #d9d9d9;
+    padding:10px;
+    padding-right: 20px;
+}
+
+/* 검색하기 input 박스 */
+.searchInput {
+    width: 315px;
+    height: 30px;
+    background-color: #f5f5f5af;
+    border: 0px;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+/* 초기화, 검색 묶는 박스 */
+.buttonBox {
+    width: 1200px;
+    display: block;
+    padding-left: 40px;
+    height:40px;
+    float: left;
+    text-align: center;
+    vertical-align: 20px;
+}
+
+/* 초기화 버튼, 검색 버튼 */
+.initButton, .searchButton {
+    width: 140px;
+    height: 30px;
+    
+  
+}
+
+/* 초기화 버튼 */
+.initButton {
+
+    border-right:2px solid #d9d9d9;
+}
+
+/* 검색 버튼 */
+.searchButton {
+   
+}
+
+/* 초기화, 검색 버튼 클릭 */
+.initButton:hover, .searchButton:hover {
+   font-weight: bold;
+}
+
+/* 거래내역 실제 컨텐츠 */
+.contentBox {
+    width: 1200px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 20px auto 60px auto;
+
+    float:left;
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+/* 테이블 제목 */
+.tableText {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 28px;
+    padding-left: 60px;
+}
+
+/* 테이블 박스 */
+table {
+
+    width: 1200px;
+    height: 300px;
+    margin: 20px auto;
+    border-style: hidden;
+    /* box-shadow: 0 0 0 1px #000; */
+    background-color:rgba(255, 255, 255, 0.5);
+    
+    
+}
+
+
+/* 테이블 제목, 데이터 셀 */
+th, td {
+    border: 1px solid;
+    text-align: center;
+    font-size: 16px;
+    border-color: rgba(161, 161, 161, 0.5);
+}
+
+/* 테이블 제목 셀 */
+th {
+
+    height: 52px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+
+/* 테이블 데이터 셀 */
+td {
+    height:44px;
+    font-size: 15px;
+    vertical-align: middle;
+    color: rgb(36, 36, 36);
+    margin:8px 0px;
+}
+
+/* 테이블 내 plus, minus 아이콘 */
+.plus, .minus {
+    width: 15px;
+    height: 15px;
+}
+/*페이징*/
+.page {
+    float: left;
+    text-align: center;
+    width:1200px;
+
+}
+.page button {
+    margin: 0px 8px;
+}
+/*돋보기 이미지 */
+.searchImg {
+    /* width:26px; */
+    height:24px;
+    /* margin: 0px 0px; */
+    /* padding: 0px 0px; */
+    /* position: absolute; */
+    /* bottom: 790px; */
+    /* right: 110px; */
+    padding: 2px;
+    margin-left: 10px;
+    margin-bottom: -5px;
+    cursor: pointer;
+
+}

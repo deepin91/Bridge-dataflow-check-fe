@@ -1,0 +1,160 @@
+@keyframes fadein {
+  from { opacity: 0.7; }
+  to {  opacity: 1; }
+}
+*{
+font-family: 'SUITE-Regular';
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+ }
+ 
+ /* 공지사항 상단 텍스트 */
+ .Notice{
+
+  color: black;
+  /* font-weight: 600; */
+  text-align: center;
+  margin: 50px auto;
+  font-size: 40px;
+ }
+ 
+ /* 공지사항 중앙 겉 박스 */
+ .Box{
+  width: 1200px;
+  min-height: 456px;
+  height:auto;
+  margin: 80px auto 40px auto;
+ border-top: 2px solid #999999;
+ border-bottom: 2px solid #999999;
+ }
+ 
+ /* 제목 텍스트 */
+ .Title{
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+ 
+  margin-bottom: 5px;
+  padding-left: 25px;
+  padding-top: 70px;
+ }
+ 
+ /* 제목 */
+ .TitleBox{
+  padding-top: 30px;
+  float: center;
+  width: 1200px;
+  height: 80px;    
+  font-size: 20px;
+  color: black;
+  padding-left:32px;
+  /* font-weight: bold; */
+  border-bottom: 1px solid rgb(180, 180, 180);
+ }
+ 
+ /* 내용 텍스트 */
+ .Contents{
+  font-size: 18px;
+  color: black;
+  margin-bottom: 5px;
+  padding-top: 40px;
+  padding-left: 25px;
+  font-family: 'SUITE-Regular';
+ }
+ 
+ /* 내용 입력창 */
+ .ContentsBox{
+  width: 1200px;
+  height: 300px;    
+  font-size: 18px;
+  color: #D9D9D9;
+  margin-left: 22px;
+  padding-top: 28px;
+  padding-left: 10px;
+  border: none; 
+  font-family: 'SUITE-Regular';
+ }
+ 
+ .ContentsBox p {
+  font-size:16px;
+  font-family: 'SUITE-Regular';
+ }
+ 
+ /* 등록 버튼 */
+ .Button1{
+  float: right;     
+  width: 65px;
+  height: 25px;
+  margin: 20px auto;
+  margin-right: 23px;
+  background-color: #ACACAC;
+ }
+ 
+ 
+ /* 수정 버튼 */
+ .Button2{
+  float: right;     
+  width: 48px;
+  height: 25px;
+  margin: 40px auto;
+  margin-right: 23px;
+  border-bottom:2px solid #a7a7a7;
+  
+ }
+ 
+ /* 삭제 버튼 */
+ .Button3{
+  float: right;     
+  width: 48px;
+  height: 25px;
+  margin: 40px auto;
+  margin-right: 15px;
+  border-bottom:2px solid #a7a7a7;
+
+ }
+ /*목록으로 버튼*/
+ .Button4 {
+  font-size:14px;
+  width:100px;
+  height:48px;
+  border:1px solid #212121;
+  border-radius: 0.4rem;
+  margin-left: 550px;
+  margin-bottom: 40px;
+  margin-top:20px;
+ }
+
+ /*제목 입력칸 */
+ .topbox {
+  margin: 50px 0px;
+ }
+
+ .topbox input {
+  /* background-color: #ACACAC; */
+  font-size: 18px;
+  width:1200px;
+  height:40px;
+  border-bottom: 2px solid #ebedf2;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+ }
+ /*작성 버튼 */
+ .btn {
+  float:right;
+  font-size: 16px;
+  border-bottom: 2px solid #ebedf2;
+  padding:12px 10px 10px 10px;
+  
+ }
+ .btn:hover {
+  font-weight: bold;
+ }
+ /*작성창*/
+ .writebox {
+  margin-bottom: 100px;
+ }
