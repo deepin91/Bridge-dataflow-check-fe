@@ -68,7 +68,7 @@ const TipDetail = ({ match }) => {
                 { "tbIdx": tb_idx, "tbcComments": temp },
                 { headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` } }
             ).then(() => {
-                console.log("asdasdasd")
+                console.log(temp)
                 axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/comments/${tb_idx}`)
                     .then(r => {
                         console.log(r.data)

@@ -28,7 +28,7 @@ const Chatting = ({ match }) => {
     const publish = () => {
         if (!client.current.connected) return;
         client.current.publish({
-            destination: '/pub/hello',
+            destination: '/pub/chat/message',
             body: JSON.stringify({
                 roomIdx: roomIdx,
                 data: chat,
@@ -59,11 +59,19 @@ const Chatting = ({ match }) => {
             return;
         }
         connect();
-        axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/chatroom`, { headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` } })
+        axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/chatroom`, { headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` } })
             .then(r => {
-                setChatList(r.data.chatting)
-                console.log(">>>>>>>>" + r.data.chatting);
+                // 맞는 값만 state에 넣기
+                setChatList(Array.isArray(r.data.chatting) ? r.data.chatting : []);
+                // console.log(">>>>>>>>" + r.data.chatting);
                 setSender(r.data.sender)
+                // const token = sessionStorage.getItem('token');
+
+                // ✅ 여기 추가: 세션에 저장된 마지막 채팅방 자동 오픈
+                const lastRoomIdx = sessionStorage.getItem("lastRoomIdx");
+                if (lastRoomIdx) {
+                    chatroom(parseInt(lastRoomIdx)); 
+                 }
             });
     }, []);
 
@@ -79,7 +87,9 @@ const Chatting = ({ match }) => {
     }, [chatList]);
 
     const chatroom = (props) => {
-        axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/chat/${props}`)
+        // 마지막에 들어온 채팅방 기억해서 다른 페이지 갔다가 다시 돌아와도 채팅방 보여지도록 하기
+        sessionStorage.setItem("lastRoomIdx", props);
+        axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/chat/${props}`)
             .then(response => {
                 setMessage(response.data.messagelist);
                 setRoomIdx(response.data.chatting.roomIdx);
@@ -112,6 +122,14 @@ const Chatting = ({ match }) => {
             ...message,
             { roomIdx: json_body.roomIdx, data: json_body.data, writer: json_body.writer }
         ]);
+
+        setChatList(prevList =>
+            prevList.map(chat =>
+                chat.roomIdx === json_body.roomIdx
+                ? { ...chat, lastMessage: json_body.data}
+                : chat
+            )
+        );
     }, []);
 
     const handleHand = () => {
@@ -142,14 +160,16 @@ const Chatting = ({ match }) => {
                                     <div className={style.profile} onClick={() => chatroom(list.roomIdx)}>
                                         <div className={style.profileImg}>
                                             <img
-                                                src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${profileImg}.jpg`}
+                                                src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${profileImg}`}
                                                 className={style.profileIcon}
                                                 
                                             />
                                         </div>
                                         <div className={style.profileContent}>
                                             <div className={style.profileName}>{receiver}</div>
-                                            <div className={style.shortChat}>안녕하세요 작곡의뢰 ..</div>
+                                            <div className={style.shortChat}>
+                                                {list.lastMessage || "대화가 없습니다. 채팅을 시작해주세요"}
+                                            </div>
                                         </div>
                                     </div>
                                 );
@@ -159,7 +179,7 @@ const Chatting = ({ match }) => {
                     <div className={style.chatBox}>
                         <div className={style.topText}>
                             <div className={style.receiver}>
-                                <img src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${receiverImg}.jpg`} className={style.chatProfile} alt="프로필" />
+                                <img src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${receiverImg}`} className={style.chatProfile} alt="프로필" />
                                 {/* <div className={style.chatName}>{receiver}</div> */}
                             </div>
                             <div className={style.chatName}>{receiver}</div>
