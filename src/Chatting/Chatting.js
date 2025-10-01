@@ -133,7 +133,10 @@ const Chatting = ({ match }) => {
     }, []);
 
     const handleHand = () => {
-        axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/insertCommission/${receiver}`, { "userId1": sender })
+        axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/insertCommission/${receiver}`, {
+             "userId1": sender,
+             "userId2": receiver
+            })
             .then(r => {
                 history.push(`/partner/doing`);
             })
