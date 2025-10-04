@@ -192,7 +192,7 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     line-height: 26px;
 }
 .chatContent1 {
-    width: 660px;
+    width: 675px;
     min-height:32px;
     height:auto;
     display: inline-block;
@@ -224,7 +224,7 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 .chatContent4 {
     width:600px;
     height:32px;
-    margin:8px 0px 10px 30px;
+    margin:8px 0px 10px 40px;
     display: inline-block;
     word-wrap:break-word;
 }
@@ -236,7 +236,7 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     /* position: relative; */
     /* margin-top: 32px;  */
     /* margin-left:32px; */
-    height: 66px;
+    height: 68px;
     background-color: #F2F5F9;
 }
 
@@ -269,12 +269,29 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     border-radius: 6px;
     box-shadow: 0px 3px 1px 1px #f6f6f6;
 }
-
 /* 채팅 칸 박스 내 전송 아이콘 */
 .sendIcon {
     width: 30px;
     height: 30px;
+    /* margin-top: 2px; */
 }
+
+.producerSendButton {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    right: 53px;
+    top:6px;
+    /* left: 624px; */
+    bottom: 42px;
+    padding-top: 2px;
+    background: #2367E2;
+    border-radius: 6px;
+    box-shadow: 0px 3px 1px 1px #f6f6f6;
+}
+
+
+
 
 /* 채팅 칸 input 박스 */
 .chatInput {
@@ -284,8 +301,8 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     /* background-color: #fcfcfc; */
     border: none;
     /* margin: 16px; */
-    /* margin-top: 30px; */
-    margin-left: 36px;
+    margin-top: 10px;
+    margin-left: 38px;
     font-family: 'SUITE-Regular';
     font-size: 16px;
     padding:0px 12px;
@@ -295,7 +312,7 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     overflow-y:auto;
     /* overflow-x: ; */
     /* width:700px; */
-    height:468px;
+    height:492px;
     background-color: #F2F5F9;
 }
 .shortChat {

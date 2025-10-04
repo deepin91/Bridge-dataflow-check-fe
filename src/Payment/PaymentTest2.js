@@ -56,7 +56,7 @@ function PaymentTest2({ match }) {
     const handlerOnClickToPay = (e) => {
         if (total == 0 && usepoint >= total) {
             axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/doPayment/${producer}`,
-                { "clients": user1, "producer": producer, "usepoint": pointBox, "totalCost": total, downpayment })
+                { "clients": user1, "producer": producer, "usepoint": pointBox, "totalCost": total, "downpayment": downpayment })
                 .then(response => {
                     Swal.fire(
                         'Success!',

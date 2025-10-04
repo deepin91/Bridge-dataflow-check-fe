@@ -21,7 +21,7 @@ const Chatting = ({ match }) => {
     const [roomIdx, setRoomIdx] = useState('');
     const [receiver, setReceiver] = useState('');
     const [users, setUsers] = useState([]);
-    const [receiverImg, setReceiverImg] = useState([]);
+    const [receiverImg, setReceiverImg] = useState('');
 
     const history = useHistory();
 
@@ -86,6 +86,7 @@ const Chatting = ({ match }) => {
         });
     }, [chatList]);
 
+    const [clientId, setClientId] = useState('');
     const chatroom = (props) => {
         // 마지막에 들어온 채팅방 기억해서 다른 페이지 갔다가 다시 돌아와도 채팅방 보여지도록 하기
         sessionStorage.setItem("lastRoomIdx", props);
@@ -94,6 +95,8 @@ const Chatting = ({ match }) => {
                 setMessage(response.data.messagelist);
                 setRoomIdx(response.data.chatting.roomIdx);
                 subscribe(response.data.chatting.roomIdx);
+
+                setClientId(response.data.chatting.userId1);
                 if (sender === response.data.chatting.userId1) {
                     setReceiver(response.data.chatting.userId2);
                     axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/profile/${response.data.chatting.userId2}`)
@@ -143,93 +146,114 @@ const Chatting = ({ match }) => {
             .catch(e => { console.log(e) });
     };
 
-    return (
-        <>
-            <div className='container clearfix'>
-                <div className={style.mainBox}>
-                    <div className={style.chatListBox}>
-                        <div className={style.chatListText}>채팅 목록</div>
-                        <div className={style.chatListProfile}>
-                            {chatList.map(list => {
-                                let receiver;
-                                if (list.userId1 === sender) {
-                                    receiver = list.userId2;
-                                } else if (list.userId2 === sender) {
-                                    receiver = list.userId1;
-                                }
-                                const userProfile = users.find(user => user.userId === receiver);
-                                const profileImg = userProfile ? userProfile.profileImg : '';
-                                return (
-                                    <div className={style.profile} onClick={() => chatroom(list.roomIdx)}>
-                                        <div className={style.profileImg}>
-                                            <img
-                                                src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${profileImg}`}
-                                                className={style.profileIcon}
-                                                
-                                            />
-                                        </div>
-                                        <div className={style.profileContent}>
-                                            <div className={style.profileName}>{receiver}</div>
-                                            <div className={style.shortChat}>
-                                                {list.lastMessage || "대화가 없습니다. 채팅을 시작해주세요"}
-                                            </div>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
+return (
+  <>
+    <div className="container clearfix">
+      <div className={style.mainBox}>
+        {/* ---------------- 채팅 목록 ---------------- */}
+        <div className={style.chatListBox}>
+          <div className={style.chatListText}>채팅 목록</div>
+          <div className={style.chatListProfile}>
+            {chatList.map(list => {
+              let receiver;
+              if (list.userId1 === sender) {
+                receiver = list.userId2;
+              } else if (list.userId2 === sender) {
+                receiver = list.userId1;
+              }
+              const userProfile = users.find(user => user.userId === receiver);
+              const profileImg = userProfile ? userProfile.profileImg : '';
+
+              return (
+                <div
+                  key={list.roomIdx}
+                  className={style.profile}
+                  onClick={() => chatroom(list.roomIdx)}
+                >
+                  <div className={style.profileImg}>
+                    <img
+                      src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${profileImg}.jpg`}
+                      className={style.profileIcon}
+                      alt="프로필"
+                    />
+                  </div>
+                  <div className={style.profileContent}>
+                    <div className={style.profileName}>{receiver}</div>
+                    <div className={style.shortChat}>
+                      {list.lastMessage || "대화가 없습니다. 채팅을 시작해주세요"}
                     </div>
-                    <div className={style.chatBox}>
-                        <div className={style.topText}>
-                            <div className={style.receiver}>
-                                <img src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${receiverImg}`} className={style.chatProfile} alt="프로필" />
-                                {/* <div className={style.chatName}>{receiver}</div> */}
-                            </div>
-                            <div className={style.chatName}>{receiver}</div>
-                        </div>
-                        <div className={style.chat}>
-                            <div className={style.chatbox}>
-                                {message.map(d => {
-                                    if (d.writer === sender) {
-                                        return <div className={style.chatContent1}><p>{d.data}</p></div>;
-                                    } else if (d.writer != null && d.writer !== sender) {
-                                        return <div className={style.chatContent4}><p>{d.data}</p></div>;
-                                    }
-                                })}
-                            </div>
-                            <div className={style.chatFoot}>
-                            <input
-                                    type="text"
-                                    onChange={(e) => setChat(e.target.value)}
-                                    value={chat}
-                                    className={style.chatInput}
-                                />
-
-                                {/* <div className={style.v_line}> */}
-                                <button onClick={handleHand} className={style.handButton}>
-                                    <Icon icon="la:handshake" color="#aaa" width="24" />
-                                </button>
-
-                               
-
-
-                                {/* <input
-                                    type="text"
-                                    onChange={(e) => setChat(e.target.value)}
-                                    value={chat}
-                                    className={style.chatInput}
-                                /> */}
-                                <button className={style.sendButton} onClick={publish}>
-                                    <Icon icon="mingcute:send-fill" color="#fcfcfc" width="24" />
-                                </button>
-                                {/* </div> */}
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ---------------- 채팅창 or 안내문 ---------------- */}
+        {receiver ? (
+          <div className={style.chatBox}>
+            <div className={style.topText}>
+              {receiverImg && (
+                <div className={style.receiver}>
+                  <img
+                    src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${receiverImg}.jpg`}
+                    className={style.chatProfile}
+                    alt="프로필"
+                  />
+                </div>
+              )}
+              <div className={style.chatName}>{receiver}</div>
             </div>
-        </>
-    );
+
+            <div className={style.chat}>
+              <div className={style.chatbox}>
+                {message.map((d, idx) => {
+                  if (d.writer === sender) {
+                    return (
+                      <div key={idx} className={style.chatContent1}>
+                        <p>{d.data}</p>
+                      </div>
+                    );
+                  } else if (d.writer && d.writer !== sender) {
+                    return (
+                      <div key={idx} className={style.chatContent4}>
+                        <p>{d.data}</p>
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
+              </div>
+
+              <div className={style.chatFoot}>
+                <input
+                  type="text"
+                  onChange={(e) => setChat(e.target.value)}
+                  value={chat}
+                  className={style.chatInput}
+                />
+
+                {sender === clientId && (
+                  <button onClick={handleHand} className={style.handButton}>
+                    <Icon icon="la:handshake" color="#aaa" width="24" />
+                  </button>
+                )}
+
+                <button className={style.sendButton} onClick={publish}>
+                  <Icon icon="mingcute:send-fill" color="#fcfcfc" width="24" />
+                </button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className={style.emptyBox}>
+            채팅방을 선택해주세요
+          </div>
+        )}
+      </div>
+    </div>
+  </>
+);
 };
 
 export default Chatting;
