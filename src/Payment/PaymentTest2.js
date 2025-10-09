@@ -63,7 +63,7 @@ function PaymentTest2({ match }) {
                         '결제가 완료되었습니다.',
                         'success'
                     )
-                    axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/insertCommission/${producer}`, { "userId1": user1,"coMoney" : pointBox })
+                    // axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/insertCommission/${producer}`, { "userId1": user1,"coMoney" : pointBox }) // -- 결제완료 시 작업목록 2번 들어가는 현상 발생
                         .then(r => {
                             history.push(`/partner/doing/`);
 

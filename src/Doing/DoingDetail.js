@@ -51,6 +51,7 @@ const DoingDetail = ({ match }) => {
                     .then(r => {
                         // console.log(">>>>" + r.data);
                         setProgress(r.data[0].progress);
+                        console.log(progress);
                         setUserId2(r.data[0].userId2);
                         setMoney(r.data[0].cmoney);
                     })
@@ -229,18 +230,26 @@ const DoingDetail = ({ match }) => {
                 <div className={style.box1}>
                     <h1>작업 진행</h1>
                     <div className={style.yn}>
-                        {progress == 0 ?
-                            <div>현재 작업이 <span>진행 중</span> 입니다.</div>
-                            :
+                        
+                        {progress === 0 ? (
                             <p>작업이 <span>완료</span> 되었습니다.</p>
-                        }
-
+                        ) : (
+                            <div>현재 작업이 <span>진행 중</span> 입니다.</div>
+                        )}
+                        
                     </div>
                     <Link to='/partner/doing'><button> 목록으로 </button></Link>
 
-                    {money == 0 ? <Link to={`/partner/payment/${userId2}`}><button> 안심결제 </button></Link> : ""}
-
-                    {progress == 0 ? <button onClick={handleEnd}> 작업완료 </button> : ""}
+                    {money === 0 && userId !== userId2 ? ( 
+                        <Link to={`/partner/payment/${userId2}`}>
+                            <button> 안심결제 </button>
+                            </Link> 
+                    ) : null}    
+                    {progress === 0 ? (
+                        <button onClick={handleEnd}> 작업완료 </button>
+                    ): null}
+                    {/* {progress == 0 ? <button onClick={handleEnd}> 작업완료 </button> : ""} */}
+                        
                 </div>
 
                 <div className={style.list}>

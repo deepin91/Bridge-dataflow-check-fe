@@ -14,10 +14,10 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 
 
 @font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -269,6 +269,20 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     border-radius: 6px;
     box-shadow: 0px 3px 1px 1px #f6f6f6;
 }
+
+.producerSendButton {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    /* right: 84px; */
+    /* top:6px; */
+    left: 588px;
+    bottom: 41px;
+    background: #2367E2;
+    border-radius: 6px;
+    box-shadow: 0px 3px 1px 1px #f6f6f6;
+}
+
 /* 채팅 칸 박스 내 전송 아이콘 */
 .sendIcon {
     width: 30px;
@@ -312,7 +326,7 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     overflow-y:auto;
     /* overflow-x: ; */
     /* width:700px; */
-    height:492px;
+    height:468px;
     background-color: #F2F5F9;
 }
 .shortChat {

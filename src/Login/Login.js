@@ -20,11 +20,14 @@ const Login = ({ setIsLogin}) => {
         // axios.post('http://localhost:8080/api/bridge/pass/login',
             {"userId": userId,"userPassword": userPassword})
             .then(response => {
+                console.log("🔑 로그인 응답:", response);
+                sessionStorage.setItem("token",response.data);
+                console.log("📦 저장된 토큰:", sessionStorage.getItem("token"));
+                
+
                 if(response.data){
                     alert('정상적으로 로그인되었습니다');
-                    console.log(response);
                     console.log(history)
-                    sessionStorage.setItem("token",response.data);
                     setIsLogin(true);
                     history.push('/');
                 }
