@@ -24,6 +24,7 @@ const Chatting = ({ match }) => {
     const [receiverImg, setReceiverImg] = useState(''); // userId → 프로필 이미지 맵 // 배열 -> 문자열로 초기화
     const [receiverImgs, setReceiverImgs] = useState({}); // userId → profileImg map
     const [isClient, setIsClient] = useState(false);
+    const chatEndRef = useRef(null); // 자동 스크롤
 
     // sender:
     // 로그인된 내 아이디 (세션 기반으로 /api/chatroom에서 받아옴)
@@ -38,7 +39,7 @@ const Chatting = ({ match }) => {
     const history = useHistory();
 
     const publish = () => {
-        if (!client.current.connected) return;
+        if (!client.current.connected)  return; //  채팅방이 열리지 않았거나 메시지 내역이 없으면 전송x
         client.current.publish({
             destination: '/pub/chat/message',
             body: JSON.stringify({
@@ -139,8 +140,18 @@ const Chatting = ({ match }) => {
              });
     }, [chatList, sender]);
 
+    {/* 채팅 자동 스크롤 */}
+    useEffect(() => {
+        if (chatEndRef.current) {
+        chatEndRef.current.scrollIntoView({ 
+            behavior: message.length > 1 ? 'smooth' : 'auto', 
+        });
+        }
+    }, [message]); // 메시지가 바뀔 때마다 실행
+
+
     const chatroom = (props, senderId = sender) => {
-        setReceiverImg(''); // 👈 이미지 초기화
+        // setReceiverImg(''); // 👈 이미지 초기화
         sessionStorage.setItem("lastRoomIdx", props);
 
         axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/chat/${props}`)
@@ -220,7 +231,7 @@ const Chatting = ({ match }) => {
                                         <div className={style.profileImg}>
                                             <img 
                                                 src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${profileImg}.jpg`}
-                                                 onError={(e) => { e.target.src = '/default-profile.png'; }} // fallback
+                                                 onError={(e) => { e.target.src = '/profileImg.png'; }} // fallback
                                                 className={style.profileIcon}
                                                 alt="프로필"
                                             />
@@ -237,28 +248,43 @@ const Chatting = ({ match }) => {
                         </div>
                     </div>
                     <div className={style.chatBox}>
+                        {receiver ? (
                         <div className={style.topText}>
-              
                                 <div className={style.receiver}> 
                                     <img src={`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/getImage/${receiverImg}.jpg`} //채팅방 상단 이미지
                                         className={style.chatProfile} alt="프로필" />
                                 </div>
-                          
                             <div className={style.chatName}>{receiver}</div>
                         </div>
+                        ) : (
+                          <div className={style.topText}>
+                                <div className={style.receiver}> 
+                                    <img src="/profileImg.png"
+                                        className={style.chatProfile} alt="기본 프로필" />
+                                </div>
+                            <div className={style.chatName}> 대화상대를 선택하세요 </div>
+                        </div>  
+                        )}
                         <div className={style.chat}>
                             <div className={style.chatbox}>
-                                {message.map((d, index) => {
+                            {message.length === 0 ? (
+                                <div className={style.noMessage}>
+                                    아직 대화가 없습니다. 메시지를 보내 대화를 시작하세요!
+                                </div>
+                                ) : (
+                                message.map((d, index) => {
                                     console.log("📨 메시지:", d.data, "보낸사람:", d.writer, "나:", sender);
                                     
                                     return d.writer === sender ? (
                                          <div key={index} className={style.chatContent1}><p>{d.data}</p></div>
                                     ) : (
                                         d.writer != null ? (
-                                            <div key={d.messageIdx} className={style.chatContent4}><p>{d.data}</p></div>
+                                            <div key={index} className={style.chatContent4}><p>{d.data}</p></div>
                                         ) : null
                                     );
-                                })}
+                                })
+                                )}
+                                <div ref={chatEndRef}/> {/* 채팅 자동 스크롤 */}
                             </div>
                             <div className={style.chatFoot}>
                                 <input
@@ -271,7 +297,13 @@ const Chatting = ({ match }) => {
                                 style={{ visibility: isClient ? 'visible' : 'hidden' }} >
                                     <Icon icon="la:handshake" color="#aaa" width="24" />
                                 </button>
-                                <button className={style.sendButton} onClick={publish}>
+                                <button className={style.sendButton} onClick={publish}
+                                disabled={!roomIdx}
+                                style={{
+                                    backgroundColor: !roomIdx ? '#ccc' : '#2b88ff',
+                                    cursor: !roomIdx ? 'not-allowed' : 'pointer'
+                                    }}
+                                >
                                     <Icon icon="mingcute:send-fill" color="#fcfcfc" width="24" />
                                 </button>
                             </div>

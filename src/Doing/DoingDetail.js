@@ -25,6 +25,9 @@ const DoingDetail = ({ match }) => {
     const [open, setOpen] = useState(false);
     const [uuid, setUuid] = useState('');
     const [login, setLogin] = useState('');
+    const [clients, setClients] = useState('');
+    const [producer, setProducer] = useState('');
+    // const [commissionEnd, setCommissionEnd] = useState(false);
 
 
 
@@ -51,9 +54,15 @@ const DoingDetail = ({ match }) => {
                     .then(r => {
                         // console.log(">>>>" + r.data);
                         setProgress(r.data[0].progress);
-                        console.log(progress);
+
+                        // const currentProgress = r.data[0].progress;
+                        // console.log("📦 서버에서 받아온 progress:", currentProgress);
+                        // setProgress(currentProgress);
+
                         setUserId2(r.data[0].userId2);
+                        setProducer(r.data[0].userId2);
                         setMoney(r.data[0].cmoney);
+                        setClients(r.data[0].userId1);
                     })
                     .catch(err => {
                         console.log(err);
@@ -223,7 +232,7 @@ const DoingDetail = ({ match }) => {
             .catch(e => { console.log(e) })
     }
 
-
+    console.log("📦 progress 값:", progress, typeof progress);
     return (
         <>
             <div className='container clearfix'>
@@ -231,7 +240,7 @@ const DoingDetail = ({ match }) => {
                     <h1>작업 진행</h1>
                     <div className={style.yn}>
                         
-                        {progress === 0 ? (
+                        {progress === false ? (
                             <p>작업이 <span>완료</span> 되었습니다.</p>
                         ) : (
                             <div>현재 작업이 <span>진행 중</span> 입니다.</div>
@@ -240,25 +249,26 @@ const DoingDetail = ({ match }) => {
                     </div>
                     <Link to='/partner/doing'><button> 목록으로 </button></Link>
 
-                    {money === 0 && userId !== userId2 ? ( 
+                    {money === 0 && progress === false && userId !== producer ? ( 
                         <Link to={`/partner/payment/${userId2}`}>
                             <button> 안심결제 </button>
                             </Link> 
                     ) : null}    
-                    {progress === 0 ? (
+                    
+                    {Number(progress) === 0 ? (
                         <button onClick={handleEnd}> 작업완료 </button>
-                    ): null}
+                    ) : null}
                     {/* {progress == 0 ? <button onClick={handleEnd}> 작업완료 </button> : ""} */}
                         
                 </div>
-
+                    {/* 지금 이 위에부분 대차게 꼬임 다시 설정해야함*/}
                 <div className={style.list}>
 
 
 
                     <div>
-                        {progress == 0 && money > 0 ?
-                            <p>{userId} 님이 {money}p 를 안심 결제하셨습니다 <br /> 작업 완료시 수령하실 수 있습니다 </p>
+                        {Number(progress) === 0 && money > 0 ?
+                            <p>{clients} 님이 {money}p 를 안심 결제하셨습니다 <br /> 작업 완료시 수령하실 수 있습니다 </p>
                             :
                             ""
                         }

@@ -121,8 +121,9 @@ const PartnerDatail = ({ match }) => {
                     </div>
                 </div>
                 {/* 신청하기 버튼 클릭시 해당 유저와 채팅 연결 필요 */}
+                {/* 1:1버튼에 disabled={userId === data.userId} 추가해서 자기자신이 작성한 글이면 클릭 안되도록 설정  */}
                 <div className={style.buttonbox}>
-                    <button onClick={handleChat}> 1:1 채팅 </button>
+                    <button onClick={handleChat} disabled={userId === data.userId}> 1:1 채팅 </button> 
                 </div>
                 <div className={style.buttonbox2}>
                     {userId == data.userId || userId == 'admin' ? <button onClick={handleDelete}>삭제하기</button> : ""}

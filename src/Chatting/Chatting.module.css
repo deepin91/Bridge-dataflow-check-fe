@@ -123,11 +123,32 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 
 /* 채팅 박스 최상위 텍스트 박스 */
 .topText {
+    height: 92;
     padding: 20px 0 0 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0px 2px 3px 0px #EAEAEA;
 }
+
+.emptyTopText {
+    height: 92;
+    padding: 40px 0 0 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #EAEAEA;
+    background-color: #F2F5F9;
+}
+
+.emptyReceiver {
+    /* padding-left: 20px; */
+    /* padding-bottom: 10px; */
+    /* float: left; */
+    width: 48px;
+    height: 48px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
 
 .receiver {
     /* padding-left: 20px; */
@@ -150,11 +171,11 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
 /* 위 텍스트 박스 닉네임 텍스트 */
 .chatName {
     /* display: inline-block; */
-    font-size: 24px;
+    font-size: 21px;
     /* margin-bottom: 12px; */
-    margin-left: 60px;
+    margin-left: 70px;
     position: relative;
-    top: -36px;
+    top: -32px;
     font-family: 'SUITE-Regular';
     width: 600px;
 }
@@ -175,11 +196,11 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     border-radius: 5px;
 }
 
-/* 수신자(발신자인 것 같은데?) 채팅 내용 */
+/* 발신자 채팅 내용 */
 .chatContent1 p {
     padding:8px;
     float:right;
-    min-width: 100px;
+    min-width: 40px;
     max-width: 300px;
     min-height: 32px;
     height:auto;
@@ -206,12 +227,12 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     float: right;
 }
 
-/* 발신자(수신자인 것 같은데?) 채팅 내용 */
+/* 수신자 채팅 내용 */
 .chatContent4 p {
     padding:8px;
     float:left; 
     max-width: 300px;
-    min-width: 100px;
+    min-width: 40px;
     min-height: 32px;
     height:auto;
     background-color: #fafbfd;
@@ -326,9 +347,19 @@ body{ -ms-overflow-style: none; } ::-webkit-scrollbar { display: none; }
     overflow-y:auto;
     /* overflow-x: ; */
     /* width:700px; */
-    height:468px;
+    height:470px;
     background-color: #F2F5F9;
+    padding-top: 7px;
 }
 .shortChat {
     display: block;
+}
+
+.noMessage {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 0.97rem;
+  font-style: italic;
+  margin-top: 200px;
 }
