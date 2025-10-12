@@ -54,6 +54,7 @@ const DoingDetail = ({ match }) => {
                     .then(r => {
                         // console.log(">>>>" + r.data);
                         setProgress(r.data[0].progress);
+                        console.log("📦 progress 값, 작업중 0 / 작업완료 시 1  = ", progress, typeof progress);
 
                         // const currentProgress = r.data[0].progress;
                         // console.log("📦 서버에서 받아온 progress:", currentProgress);
@@ -232,7 +233,7 @@ const DoingDetail = ({ match }) => {
             .catch(e => { console.log(e) })
     }
 
-    console.log("📦 progress 값:", progress, typeof progress);
+    // console.log("📦 progress 값:", progress, typeof progress);
     return (
         <>
             <div className='container clearfix'>
@@ -240,24 +241,39 @@ const DoingDetail = ({ match }) => {
                     <h1>작업 진행</h1>
                     <div className={style.yn}>
                         
-                        {progress === false ? (
-                            <p>작업이 <span>완료</span> 되었습니다.</p>
-                        ) : (
+                        {progress === 0 ? (
                             <div>현재 작업이 <span>진행 중</span> 입니다.</div>
+                        ) : (
+                            <p>작업이 <span>완료</span> 되었습니다.</p>
                         )}
-                        
                     </div>
                     <Link to='/partner/doing'><button> 목록으로 </button></Link>
 
-                    {money === 0 && progress === false && userId !== producer ? ( 
+                    {money === 0 && progress === 0 && userId !== producer ? ( 
                         <Link to={`/partner/payment/${userId2}`}>
                             <button> 안심결제 </button>
                             </Link> 
                     ) : null}    
-                    
-                    {Number(progress) === 0 ? (
-                        <button onClick={handleEnd}> 작업완료 </button>
-                    ) : null}
+
+                    {progress === 0 && (    // 작업 진행중인 상태고
+                        <button onClick={handleEnd}
+                            disabled={ money === 0 } // 결제해야할 게 남아있는 경우 버튼이 비활성화 되도록
+                                style={{
+                                    cursor: money === 0 ? 'not-allowed' : 'pointer',
+                                    pointerEvents: money === 0 ? 'none' : 'auto',
+                                    opacity: money === 0 ? 0.5 : 1,
+                                    }}
+                         > 
+                            작업완료 
+                        </button>
+                    )}
+                    {/* <button className={style.sendButton} onClick={publish}
+                                                    disabled={!roomIdx}
+                                                    style={{
+                                                        backgroundColor: !roomIdx ? '#ccc' : '#2b88ff',
+                                                        cursor: !roomIdx ? 'not-allowed' : 'pointer'
+                                                        }}
+                                                    ></button> */}
                     {/* {progress == 0 ? <button onClick={handleEnd}> 작업완료 </button> : ""} */}
                         
                 </div>
@@ -267,7 +283,7 @@ const DoingDetail = ({ match }) => {
 
 
                     <div>
-                        {Number(progress) === 0 && money > 0 ?
+                        {progress === 0 && money > 0 ?
                             <p>{clients} 님이 {money}p 를 안심 결제하셨습니다 <br /> 작업 완료시 수령하실 수 있습니다 </p>
                             :
                             ""
