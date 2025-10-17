@@ -25,8 +25,7 @@ const Chatting = ({ match }) => {
     const [receiverImgs, setReceiverImgs] = useState({}); // userId → profileImg map
     const [isClient, setIsClient] = useState(false);
     const [roomActive, setRoomActive] = useState(true);
-    // const [commissionIdx, setCommissionIdx] = useState(null);           // NEW
-    // const [commissionWriterId, setCommissionWriterId] = useState(null); // NEW
+    const [cMoney, setCMoney] = useState(''); 
 
     const chatEndRef = useRef(null); // 자동 스크롤
     const activatedRef = useRef(false);   // connect() 중복 호출 가드
@@ -104,10 +103,12 @@ const Chatting = ({ match }) => {
                 setChatList(Array.isArray(r.data.chatting)
                  ? r.data.chatting.map(row => ({
                      ...row,
-                     lastMessage: row.lastMessage === HANDSHAKE_EVENT ? '' : row.lastMessage
-                   }))
-                 : []
-                );
+                     lastMessage: !row.lastMessage || row.lastMessage === HANDSHAKE_EVENT
+                      ? (row.active === false ? '작업이 완료된 채팅방입니다.' : '대화가 없습니다. 채팅을 시작해주세요')
+                      : row.lastMessage
+                       }))
+                     : []
+                    );
                 setSender(r.data.sender);  
                 // ↑ 이 단계에서 어떤 채팅방들이 나랑 관련 있는지, 그리고 내 역할이 userId1인지 userId2인지 파악 가능
                 sessionStorage.setItem("lastRoomIdx", r.data.chatting[0]?.roomIdx || ''); // 안전하게 넣기
@@ -134,12 +135,14 @@ const Chatting = ({ match }) => {
         }
     }, [sender, chatList]);
 
+    // 🔍 여기 이걸 넣어!
+    useEffect(() => {
+    console.log("🔎 채팅방 리스트 상태:", JSON.stringify(chatList, null, 2));
+    }, [chatList]);
+
     // 프로필 이미지 사전 로딩
     useEffect(() => {
         if (!sender || chatList.length === 0) return;
-
-        // setUsers([]); 
-        // setReceiverImgs({}); // 🔁 로그인 시 초기화
 
         /* 프로필 이미지 사전 로딩 
         현재 로그인된 sender와 반대편 유저를 찾아 targetId 설정
@@ -220,12 +223,12 @@ const Chatting = ({ match }) => {
 
                 const target = senderId === chatData.userId1 ? chatData.userId2 : chatData.userId1;
                 // 이미 설정된 값이면 재요청/재세팅 안함 → 깜빡임 방지
-                if (receiver !== target) {
+                // if (receiver !== target) {
                     setReceiver(target);
                     axios.get(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/profile/${target}`)
                         .then((r) => setReceiverImg(r.data.profile?.[0]?.profileImg || 'defaultImg'))
                         .catch(() => setReceiverImg('defaultImg'));
-                }
+                // }
             }) 
             .catch(console.error);
         };    
@@ -293,6 +296,14 @@ const Chatting = ({ match }) => {
         );
     }, []);
 
+    const sortedChatList = [...chatList].sort((a, b) => {
+        if (a.active !== b.active) {
+            return a.active ? -1 : 1; // active=true 먼저
+    }
+            return new Date(b.lastSentTime || 0) - new Date(a.lastSentTime || 0); // 최신순
+        });
+
+
     const handleHand = () => {
         if (!isClient) return; // 💥 클라이언트가 아닌 경우 동작 막기 (프론트 보안)
 
@@ -305,24 +316,17 @@ const Chatting = ({ match }) => {
         return;
         }
 
-        // // 1. 작성자 갱신 요청 보내기
-        // axios.put(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/chat/${roomIdx}/updateRole`, null, {
-        //     headers: {
-        //         Authorization: `Bearer ${sessionStorage.getItem("token")}`,
-        //     },
-        // })
-        // .then(() => {
         // 2. 기존 협업 등록 로직 실행
         axios.post(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/insertCommission/${producerId}`, {
             userId1: sender, // --client
             userId2: producerId, // producer
-            // coMoney: 
+            // coMoney: cMoney, 
             // commissionIdx: commissionIdx,
             // commissionWriterId: commissionWriterId // ← 새 커미션 글 작성자
             },
             { headers: { Authorization: `Bearer ${token}` } }
         )
-            .then(() => {
+        .then(() => {
                 // 👇 작업 시작 이벤트를 채팅방에 브로드캐스트 (양쪽 모두 수신)
                 if (client.current?.connected) {
                     client.current.publish({
@@ -334,12 +338,24 @@ const Chatting = ({ match }) => {
                 }),
             });
         }
-     })
-         .catch(e => {
-            console.error("악수 처리 중 오류 발생", e);
-            Swal.fire({ icon: 'error', title: '협업 등록 실패', text: e?.response?.data?.message || '다시 시도해주세요.' });
-        });
-    };
+            // 3. ✅ 채팅방 비활성화 API 호출 (active = false)
+        return axios.put(`http://${process.env.REACT_APP_IP}:${process.env.REACT_APP_PORT}/api/chat/${roomIdx}/close`, null, {
+            headers: { Authorization: `Bearer ${token}` },
+            });
+        })
+        .then(() => {
+            console.log("✅ 채팅방이 비활성화되었습니다.");
+            setRoomActive(false); // 프론트에서도 바로 상태 반영
+        })
+            .catch(e => {
+                console.error("악수 처리 중 오류 발생", e);
+                Swal.fire({ 
+                    icon: 'error', 
+                    title: '협업 등록 실패', 
+                    text: e?.response?.data?.message || '다시 시도해주세요.' 
+                });
+            });
+        };
 
     useEffect(() => {
         return () => {
@@ -359,15 +375,11 @@ const Chatting = ({ match }) => {
                     <div className={style.chatListBox}>
                         <div className={style.chatListText}>채팅 목록</div>
                         <div className={style.chatListProfile}>
-                            {chatList.map(list => {
+                            {sortedChatList.map(list => {
                                 let partner;
                                 if (list.userId1 === sender) partner = list.userId2;
                                 else if (list.userId2 === sender) partner = list.userId1;
-                                // if (list.userId1 === sender) receiver = list.userId2;
-                                // else if (list.userId2 === sender) receiver = list.userId1;
-
-                                // const userProfile = users.find(user => user.userId === receiver);
-                                // console.log("🧠 userProfile:", userProfile);
+                                
                                 /* 채팅 목록 */
                                 const profileImg = receiverImgs[partner] || 'defaultImg';
                                 return (
@@ -383,7 +395,9 @@ const Chatting = ({ match }) => {
                                         <div className={style.profileContent}>
                                             <div className={style.profileName}>{partner}</div>
                                             <div className={style.shortChat}>
-                                                {list.lastMessage || "대화가 없습니다. 채팅을 시작해주세요"}
+                                                {list.active === false
+                                                    ? "작업이 완료된 채팅방입니다."
+                                                    : (list.lastMessage || "대화가 없습니다. 채팅을 시작해주세요")}
                                             </div>
                                         </div>
                                     </div>
